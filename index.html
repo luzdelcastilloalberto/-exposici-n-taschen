@@ -11,11 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" 
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+     crossorigin="anonymous" 
+     referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/stylesheet.css" />
   </head>
 
 <body>
-    
+
      <!-- Maquetación del menu de navegación........................... -->
     <nav id="menu">
         <ul>
@@ -32,10 +38,10 @@
            title=" se abre una nueva ventana">
            Exposiciones</a>
         </li>
-        <li>
+        <li class="tickets">
             <a href="tickets.html" > Comprar entradas</a>
         </li>
-        <li>
+        <li class="tickets icono">
             <a href="tickets.html"> 
                <i class="fa-solid fa-ticket"></i> 
              </a>
@@ -45,25 +51,28 @@
 
 <!-- Header............................................. -->
     <header class="header">
-    <img src="img/headerfondo.jpg" class="background">
+    <div class="fondo">
+        <h1> TASCHEN x THYSSEN </h1>
+      <span class="eslogan" >El arte de editar lo imposible </span>
+    </div>
     <!-- contenedor donde estan las 4 imagenes q se van cambiando  -->
     <div class="contenedor de imágenes">
         <!-- la active es la que se ve (editar en css) -->
         <div class="img active">
-            <img src="header1.jpg">
+            <img src="header1.jpg" alt="Imagen 1" />
         </div>
         <div class="slide">
-            <img src="header2.jpg">
+            <img src="header2.jpg" alt="Imagen 2" />
         </div>
         <div class="slide">
-            <img src="header3.jpg">
+            <img src="header3.jpg" alt="Imagen 3" />
         </div>
         <div class="slide">
-            <img src="header4.jpg">
+            <img src="header4.jpg" alt="Imagen 4" />
         </div>
     </div>
-  <h1 class="exposición">Taschen x Thyssen</h1>
-  <h1 class="fechas">15/05/2026 - 15/08/2026</h1>
+  <h2 class="exposición">Taschen x Thyssen</h2>
+  <h2 class="fechas">15/05/2026 - 15/08/2026</h2>
   </header>
 
 <!-- Galería de imágenes.................................................... -->
@@ -104,12 +113,13 @@
       </div>
     </section>
 
-  <section id="quote">
+  <section id="frasefoto">
+    <div>
     <div class="quote">
         <p>
-             <span> “TASCHEN books were actually like TV: </span>
-             <span> going everywhere,</span>
-              <span> reaching everyone.”</span>
+              “TASCHEN books were actually like TV: <br>
+              going everywhere,<br>
+               reaching everyone.”
         </p>
     </div>
     <div class="autor">
@@ -118,10 +128,11 @@
         </p>
     </div>
 
-    <div class="foto señor taschen">
+    <div class="fotoseñortaschen">
         <figure>
-            <img src="img/señortaschen.jpg" >
+            <img src="img/señor taschen.jpg" alt="Foto de Benedikt Taschen" />
         </figure>
+    </div>
     </div>
   </section>
 <!-- añadir footer cuando este maquetado -->

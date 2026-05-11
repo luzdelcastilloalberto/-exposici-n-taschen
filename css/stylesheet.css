@@ -1,0 +1,81 @@
+* {
+  /* Se quitan los márgenes y rellenos por defecto */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Estilos comunes para todo el texto: tipografía, color e interlineado */
+  font-family: "Roboto", sans-serif;
+  color: white;
+  line-height: 1.6;
+  /* Scroll suave cuando me muevo por la página a través de los enlaces del menú */
+  scroll-behavior: smooth;
+}
+
+img {
+  /* Ajusta ancho de imagen al contenedor padre */
+  width: 100%; /*  imagen responsiva en ancho */
+  /* Alineación vertical en línea de texto */
+  vertical-align: middle; /* evita saltos de línea en imágenes inline */
+}
+
+p {
+  /* Margen alrededor del párrafo */
+  margin: 3rem 2rem; 
+  line-height: 1rem; /
+  /* interlineado */
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  /* Estilos para el título principal */
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h2 {
+  /* Estilos para los subtítulos */
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Estilos del nav................................... */
+#menu {
+  /* Se coloca en su posición por defecto pero al hacer scroll se queda pegado arriba */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(255, 0, 0);
+}
+
+#menu img {
+  /* Tamaño de los iconos del menú */
+  width: 30px;
+  height: 30px;
+}
+
+#menu ul {
+  /* Lista horizontal sin viñetas */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#menu > ul > li > a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#menu li {
+  /* Espaciado entre los elementos del menú */
+  margin: 0 1rem;
+}
+
