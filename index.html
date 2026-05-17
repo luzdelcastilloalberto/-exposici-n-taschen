@@ -11,72 +11,155 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-     <link rel="stylesheet" 
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-     crossorigin="anonymous" 
-     referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="css/stylesheet.css" />
   </head>
 
-<body>
-
-     <!-- Maquetación del menu de navegación........................... -->
+  <body>
+    <!-- Maquetación del menu de navegación........................... -->
     <nav id="menu">
-        <ul>
-        <li>
-            <a href="#home" >
-                <img src="img/favicon.png" alt="Logo" class="logo" />
-            </a>
+      <ul>
+        <li class="logo">
+          <a href="#home"> TXT</a>
         </li>
 
         <li><a href="#historia">Nuestra historia</a></li>
         <li>
-          <a href="https://www.museothyssen.org/exposiciones"
-           target="_blank"
-           title=" se abre una nueva ventana">
-           Exposiciones</a>
+          <a
+            href="https://www.museothyssen.org/exposiciones"
+            target="_blank"
+            title=" se abre una nueva ventana"
+          >
+            Exposiciones</a
+          >
         </li>
         <li class="tickets">
-            <a href="tickets.html" > Comprar entradas</a>
+          <a href="tickets.html"> Comprar entradas</a>
         </li>
         <li class="tickets icono">
-            <a href="tickets.html"> 
-               <i class="fa-solid fa-ticket"></i> 
-             </a>
+          <a href="tickets.html">
+            <i class="fa-solid fa-ticket"></i>
+          </a>
         </li>
-        </ul>
+      </ul>
     </nav>
 
-<!-- Header............................................. -->
+    <!-- Header............................................. -->
     <header class="header">
-    <div class="fondo">
-        <h1> TASCHEN x THYSSEN </h1>
-      <span class="eslogan" >El arte de editar lo imposible </span>
-    </div>
-    <!-- contenedor donde estan las 4 imagenes q se van cambiando  -->
-    <div class="contenedor de imágenes">
-        <!-- la active es la que se ve (editar en css) -->
-        <div class="img active">
-            <img src="header1.jpg" alt="Imagen 1" />
-        </div>
-        <div class="slide">
-            <img src="header2.jpg" alt="Imagen 2" />
-        </div>
-        <div class="slide">
-            <img src="header3.jpg" alt="Imagen 3" />
-        </div>
-        <div class="slide">
-            <img src="header4.jpg" alt="Imagen 4" />
-        </div>
-    </div>
-  <h2 class="exposición">Taschen x Thyssen</h2>
-  <h2 class="fechas">15/05/2026 - 15/08/2026</h2>
-  </header>
+      <div class="fondo">
+        <h1>TASCHEN</h1>
+        <!--  <span class="eslogan">El arte de editar lo imposible </span> -->
+      </div>
 
-<!-- Galería de imágenes.................................................... -->
-  <section>
+      <!-- contenedor donde estan las 4 imagenes q se van cambiando  -->
+      <div class="contenedor">
+        <!-- la active es la que se ve (editar en css) -->
+        <div class="slide active">
+          <img src="img/header1.jpg" alt="Imagen 1" />
+        </div>
+        <div class="slide">
+          <img src="img/header2.jpg" alt="Imagen 2" />
+        </div>
+        <div class="slide">
+          <img src="img/header3.jpg" alt="Imagen 3" />
+        </div>
+        <div class="slide">
+          <img src="img/header4.jpg" alt="Imagen 4" />
+        </div>
+      </div>
+      <h2 class="exposición">Taschen x Thyssen</h2>
+      <h2 class="fechas">15/05/2026 - 15/08/2026</h2>
+
+      <div class="dots" id="dots">
+        <div class="dot active" onclick="goTo(0)"></div>
+        <div class="dot" onclick="goTo(1)"></div>
+        <div class="dot" onclick="goTo(2)"></div>
+        <div class="dot" onclick="goTo(3)"></div>
+      </div>
+    </header>
+
+    <!-- info exposición.............................................. -->
+     <section id="info">
+<div class="contenedor-tickets">
+
+    <div class="columna-izquierda">
+        <button class="btn-comprar">Comprar entradas</button>
+        <button class="btn-leer">Leer más</button>
+        <button class="btn-donde">Dónde estamos</button>
+
+        <p>
+           <span>Horario:</span> <br>
+            De lunes a viernes: <br>
+            9:00 - 21:00 <br>
+            Sábados, domingos y festivos: <br>
+            9:00 - 19:00
+        </p>
+
+        <p>
+            <span>Dirección:</span> <br>
+            <a href=https://www.google.com/maps/place/Museo+Nacional+Thyssen-Bornemisza/@40.4160406,-3.6975003,17z/data=!3m2!4b1!5s0xd422884f0d4eed9:0xec953e0041586d43!4m6!3m5!1s0xd4228831aa2ecbf:0x5a934a7882cb528f!8m2!3d40.4160406!4d-3.6949254!16zL20vMDczejE5?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D target="_blank" rel="noopener noreferrer">
+                Paseo del Prado, 8, 28014 Madrid, España
+            </a>
+            <br>
+        
+
+        
+            <span> Metro:</span><br>
+            <a href="https://www.google.com/maps/place/Banco+de+Espa%C3%B1a/@40.4190862,-3.697569,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228848c089d39:0xd64281f9147749df!8m2!3d40.4190862!4d-3.6949941!16s%2Fm%2F0zdr_p5?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"target="_blank" rel="noopener noreferrer">
+             Línea 2 - Banco de España
+            </a>
+            <br>
+        
+        
+            <span> Buses:</span><br>
+             Líneas 1 · 2 · 5 · 9 · 10 · 14 · 15 · 20 · 27 · 34 · 37 · 45 · 51
+        <br>
+        </p>
+    </div>
+
+
+<div class="columna-derecha">
+  <p>
+         La exposición propone un recorrido cronológico por 
+         la historia de Taschen y por la evolución de la forma 
+         en la que consumimos arte y cultura visual desde finales
+          del siglo XX hasta la actualidad. A través de una selección de publicaciones icónicas, 
+         la muestra explora cómo la editorial transformó el libro de arte tradicional 
+         en un objeto accesible, visual y global, capaz de acercar disciplinas como la pintura, la fotografía, la arquitectura, el cine o la moda a nuevas generaciones de lectores. 
+          El recorrido comienza con algunas de las primeras publicaciones de la editorial, 
+          entre las que destaca una de las primeras ediciones de Magritte Basic Art, 
+          perteneciente a la colección Basic Art, una serie que marcó un antes y un después al democratizar 
+          el acceso a libros de arte de calidad a precios asequibles. 
+  </p>
+          
+   <p>
+          A partir de esta etapa inicial, 
+          la exposición avanza por distintas décadas mostrando cómo Taschen amplió su catálogo y reflejó los cambios culturales, visuales y tecnológicos de cada época.
+          La muestra reúne además varias ediciones de coleccionismo actualmente descatalogadas
+           y difíciles de encontrar, algunas concebidas como auténticos objetos de diseño y exhibición. Entre libros de gran formato, ediciones limitadas y publicaciones dedicadas 
+          a figuras clave de la cultura contemporánea, la exposición pone en valor
+           no solo el contenido de los libros, sino también su dimensión física, estética y editorial.
+         Más allá de una recopilación de publicaciones, la exposición plantea una 
+         reflexión sobre el papel del libro en la era digital y sobre cómo Taschen consiguió convertir el arte en un producto cultural accesible sin perder su carácter visual y coleccionable. A través de este recorrido, el visitante podrá observar cómo el libro de arte pasó de ser un objeto reservado a especialistas a convertirse en una pieza presente en la cultura visual contemporánea. 
+  </p>
+    </div>
+  </div>
+</section>
+
+    
+
+
+
+
+
+
       <div class="galeria">
         <figure>
           <img src="img/rolling.jpg" alt="Libro rolling" />
@@ -85,13 +168,7 @@
           <img src="img/true crime.jpg" alt="Libro True Crime" />
         </figure>
         <figure>
-          <img src="img/star wars.jpg" alt="Libro Star Wars" />
-        </figure>
-        <figure>
           <img src="img/andy warhol.jpg" alt="Libro Andy Warhol" />
-        </figure>
-        <figure>
-          <img src="img/mohamed ali.jpg" alt="Libro Mohamed Ali" />
         </figure>
         <figure>
           <img src="img/andy sumer.jpg" alt="Libro Andy Sumer" />
@@ -102,38 +179,37 @@
         <figure>
           <img src="img/queen.jpg" alt="Libro Reina" />
         </figure>
-        <figure>
-          <img src="img/dali.jpg" alt="Libro Dali" />
-        </figure>
-        <figure>
-          <img src="img/helmut newton.jpg" alt="Libro Helmut Newton" />
-        </figure>
- 
-<!-- Foto con frase.................................................... -->
+        
+        <p>
+          todos estos libros estarán expuestos a lo largo del recorrido <br>
+           
+       <a href="https://www.taschen.com/en/" target="_blank"> visitar página oficial de Taschen</a>
+        </p>
+        
+
+        <!-- Foto con frase.................................................... -->
       </div>
     </section>
 
-  <section id="frasefoto">
-    <div>
-    <div class="quote">
-        <p>
-              “TASCHEN books were actually like TV: <br>
-              going everywhere,<br>
-               reaching everyone.”
-        </p>
+<section id="frasefoto">
+    <div class="contenedor-frase">
+        <div class="texto-frase">
+            <div class="quote">
+                <p>
+                    "TASCHEN books were actually like TV: <br>
+                    going everywhere,<br>
+                    reaching everyone."
+                </p>
+            </div>
+            <div class="autor">
+                <p>Benedikt Taschen</p>
+            </div>
+        </div>
+        <img src="img/señor taschen.jpg" alt="Foto de Benedikt Taschen">
     </div>
-    <div class="autor">
-        <p>
-            Benedikt Taschen
-        </p>
-    </div>
+</section>
+    <!-- añadir footer cuando este maquetado -->
 
-    <div class="fotoseñortaschen">
-        <figure>
-            <img src="img/señor taschen.jpg" alt="Foto de Benedikt Taschen" />
-        </figure>
-    </div>
-    </div>
-  </section>
-<!-- añadir footer cuando este maquetado -->
-  </html>
+    <script src="js/script.js"></script>
+  </body>
+</html>

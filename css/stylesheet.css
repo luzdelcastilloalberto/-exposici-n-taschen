@@ -27,6 +27,8 @@ p {
 
 body {
   background-color: black;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -43,6 +45,12 @@ h2 {
   font-size: 2rem;
   text-align: center;
   margin: 1rem 0;
+  font-weight: 300;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 /* Estilos del nav................................... */
@@ -51,7 +59,10 @@ h2 {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(255, 0, 0);
+  background-color: yellow;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
 }
 
 #menu img {
@@ -64,8 +75,11 @@ h2 {
   /* Lista horizontal sin viñetas */
   list-style: none;
   display: flex;
+  font-size: 20px;
+  align-items: center;
   justify-content: center;
-  padding: 1rem;
+  
+ 
 }
 
 #menu > ul > li > a {
@@ -74,8 +88,350 @@ h2 {
     text-decoration: none;
 }
 
-#menu li {
-  /* Espaciado entre los elementos del menú */
-  margin: 0 1rem;
+
+/* todos los li separados 4.5rem entre sí */
+#menu ul li + li {
+    margin-left: 4.5rem;
 }
 
+/* solo el primer .tickets tiene 417px respecto al grupo anterior */
+#menu ul li.tickets:not(.icono) {
+    margin-left: 441px;
+}
+
+/* el icono vuelve a 4.5rem */
+#menu ul li.icono {
+    margin-left: 4.5rem;
+}
+
+#menu ul li.icono i {
+  padding-top: 5px;
+    font-size: 25px;
+    color: #000000;
+
+}
+
+#menu ul li.logo a {
+    font-size: 30px;
+    font-family: "Bebas Neue", cursive;
+    color: #000000;
+    text-decoration: none;
+}
+
+#menu ul li.tickets a {
+    color: #000000;
+ }   
+
+ #menu > ul > li:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s;
+}
+
+ /* header................................................ */
+  .header {
+    position: relative;
+    width: 100%;
+    height: 100vh;          
+    overflow: hidden;
+    background: #000000;
+  }
+
+  /* ── imagen de fondo ── */
+.fondo {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo h1 {
+    margin: 0;
+    font-size: 35vw;
+}
+
+h2.exposición {
+    position: absolute;
+    bottom: 6rem;
+    left: 2rem;
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+h2.fechas {
+    position: absolute;
+    bottom: 6rem;
+    right: 2rem;
+    margin: 0;
+    font-size: 1.5rem; 
+    color: white;
+    }
+
+    .header h2 {
+    margin: 0;
+    }
+
+  
+
+  /* ── imagen pequeña superpuesta (carrusel) ── */
+  .contenedor {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 500px;
+    align-items: center;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+  .slide.active { opacity: 1; }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  }
+
+  /* ── puntos indicadores ── */
+  .dots {
+    position: absolute;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: background 0.3s;
+
+  }
+  .dot.active { background: white; }
+
+  /* info.................................... */
+
+  #info {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding-bottom: 3rem;
+    }
+
+  .columna-izquierda span {
+    font-weight: bold;
+    color: white;
+}
+
+  /* estilos comunes a los tres */
+button {
+    display: block;
+    width: 250px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    margin: 1rem 0;
+    align-items: column;
+}
+
+
+
+/* botón amarillo */
+
+.contenedor-tickets {
+    display: flex;
+    align-items: flex-end;        /* centra verticalmente */
+    justify-content: space-between;  /* botones izq, texto dcha */
+    gap: 2rem;
+    padding: 3rem;
+}
+.columna-izquierda {
+    width: 30%;
+    padding: 0 3rem;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.columna-derecha {
+    width: 50%;
+    text-align: justify;
+    padding: 0 3rem;
+    padding-bottom: 6rem;
+    align-items: flex-end;
+}
+
+
+
+.columna-derecha p:first-child {
+    margin-bottom: 0rem;
+}
+
+.button {
+    display: block;
+    width: 250px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    margin: 1rem 0;
+    
+}
+
+.btn-comprar {
+    background-color: yellow;
+    color: black;
+    border: none;
+}
+
+.btn-comprar:hover {
+    background: white;
+    color: black;
+    transition: 0.3s ease;
+}
+
+
+
+/* botón morado oscuro */
+.btn-leer {
+    background-color: #3b0764;
+    color: white;
+}
+
+/* botón morado medio */
+.btn-donde {
+    background-color: #3b0764;
+    color: white;
+}
+
+.btn-leer:hover, .btn-donde:hover {
+    background: #ffffff;
+    color: #3b0764;
+    transition: 0.3s ease;
+}
+
+p {
+    text-align: justify;
+    width: 90%;
+    margin-left: auto;   
+    font-size: 1rem; 
+    line-height: 1.15rem;
+    align-items: center;
+}
+
+  /* galeria..................................................... */
+  .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 2rem 4rem;
+}
+
+.galeria > figure {
+  flex: 27%;
+  filter: blur(10px); /* Cuanto mayor sea el número, mayor es el difuminado */
+  transition: 0.5s;
+  animation: movimiento ease 7s infinite; /* Aplica la animación de movimiento */
+}
+
+.galeria figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* ← recorta la imagen para que llene el espacio */
+    display: block;
+}
+
+.galeria p {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: white;
+    padding: 0.5rem;
+}
+
+.galeria > figure:hover {
+  filter: none; /* Se quita el difuminado al pasar el ratón */
+}
+
+@keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Frase foto.................................................. */
+
+#frasefoto {
+    background-image: url('img/señor taschen.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    
+}
+
+#frasefoto img {
+    width: 100%;
+    height: 95vh;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+     
+}
+
+.quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    }
+
+    .quote p {
+      font-family: "Bebas Neue", cursive;
+      font-size: 96px;
+       line-height: 5rem;
+       color: yellow;
+      
+      
+  }
+
+.autor {
+    position: absolute;
+    bottom: 2rem;
+    left: 90%;
+    transform: translateX(-50%);
+}
+
+.autor p {
+    font-family: "Bebas Neue", cursive;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: yellow;
+  }
