@@ -195,14 +195,12 @@ body {
     width: 40px;
     height: 40px;
     border: none;
-    border-radius: 50%;
     background: white;
-    color: black;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     font-weight: bold;
     line-height: 1;
     transition: 0.3s;
@@ -334,12 +332,20 @@ body {
 .controles button {
     width: 36px;
     height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    line-height: 1;
     border: none;
+    outline: none;
     background: black;
     color: #f2eb00;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: bold;
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .controles button:hover {
@@ -354,8 +360,9 @@ body {
 }
 
 .boton {
-    padding: 12px 24px;
+   padding: 12px 26px;
     border: none;
+    border-radius: 0;
     background: #f2eb00;
     color: black;
     cursor: pointer;
@@ -430,8 +437,9 @@ body {
 }
 
 #aceptarcompra {
-    padding: 14px 50px;
+   padding: 14px 50px;
     border: none;
+    border-radius: 0;
     background: #4b007d;
     color: white;
     cursor: pointer;
@@ -518,27 +526,23 @@ body {
 
 .codigo {
     width: 25%;
-    height: 100%;
-    padding: 20px;
+    padding: 35px 20px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 18px;
+    align-items: center;
     box-sizing: border-box;
 }
 
 .codigo img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+    width: 140px;
+    height: 140px;
 }
 
 .descargapdf {
     border: none;
     background: transparent;
     color: #4b007d !important;
-    cursor: pointer;
     font-size: 1rem;
     transition: 0.3s;
 }
@@ -583,62 +587,4 @@ body {
     }
 }
 
-/* responsive movil y tablet */
-@media screen and (max-width: 992px) {
-    .horas {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .tarjeta {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .imagenfinal,
-    .textofinal,
-    .codigo {
-        width: 100%;
-    }
-
-    .imagenfinal {
-        height: 240px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .bloque {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .imagen {
-        width: 100%;
-        height: 260px;
-    }
-
-    .texto {
-        width: 100%;
-        padding: 35px 28px;
-    }
-
-    .texto h1 {
-        margin-bottom: 20px;
-        font-size: 3.5rem;
-    }
-
-    .texto p {
-        max-width: 100%;
-    }
-
-    .pasos {
-        grid-template-columns: 1fr;
-    }
-
-    .horas {
-        grid-template-columns: 1fr;
-    }
-
-    .fase h2 {
-        font-size: 2.5rem;
-    }
-}
