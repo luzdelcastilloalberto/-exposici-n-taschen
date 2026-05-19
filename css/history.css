@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Bebas neue", "Roboto";
+}
+
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* Maquetación títulos*/
+h1 {
+ font-family: 'Bebas neue', regular;
+ text-align: center;
+ font-size: 14vw;
+ font-weight: 400;
+ margin-top: 7rem;
+}
+h2 {
+  font-family: 'Bebas neue', regular;
+    font-size: 4vw; 
+    font-weight: 200; 
+    margin-top: -3rem;
+    margin-left: 3rem;
+}
+h3 {
+   font-family: 'Roboto', italic ;
+   text-align: center;
+    font-size: 4vw; 
+    font-weight: 200; 
+    margin-top: 6rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+h4 {
+ text-align: right;
+ font-family: 'roboto', italic ;
+  font-size: 3vw;
+    font-weight: 100; 
+    margin-top: 6rem;
+    margin-right: 5rem;
+}
+
+
+.lineatiempo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 0;
+
+}
+.todo {
+    position: relative;
+}
+
+.todo > img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    width: 55%;
+}
+
+.textoimagen,
+.textoimagen1,
+.textoimagen2,
+.textoimagen3,
+.textoimagen4,
+.textoimagen5,
+.textoimagen6,
+.textoimagen7 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+     justify-content: space-between;
+}
+h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+     font-size: 150%;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+/* Filas impares: texto izquierda, imagen derecha */
+.textoimagen,
+.textoimagen2,
+.textoimagen4,
+.textoimagen6 {
+    flex-direction: row;
+  
+}
+
+/* Filas pares: imagen izquierda, texto derecha */
+.textoimagen1,
+.textoimagen3,
+.textoimagen5,
+.textoimagen7 {
+    flex-direction: row-reverse;
+    
+}
+
+figure {
+    width: 40%;
+}
+figure img {
+  width: 100%;
+    height: auto;
+}
+.texto {
+    width: 30%;
+    font-family: 'Roboto';
+
+}
+
+.textoimagen {
+margin-top: 1rem;
+margin: 5rem;
+}
+.textoimagen2 {
+margin-top: 3rem;
+margin-left: 5rem;
+margin-bottom: 6rem;
+}
+.textoimagen4 {
+margin-top: 1rem;
+margin-left: 5rem;
+
+}
+.textoimagen6 {
+margin-top: 12rem;
+margin-left: 5rem;
+margin-bottom: 4rem;
+margin-right: 4rem;
+
+}
+.textoimagen7 {
+    margin-top: 10rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-right: 8rem;
+}
+.textoimagen1 {
+padding-right: 6rem;
+}
+.textoimagen3 {
+padding-right: 6rem;
+}
+.textoimagen5 {
+padding-right: 6rem;
+margin-top: 10rem;
+}
+
+
+.textoimagen3 > div {
+  padding-top: 1rem;  
+    padding-bottom: 6rem;  
+
+}
+.figura1 img {
+    width: 50%;
+}
+.figura4 img {
+    width: 40%;
+    margin-left: 11rem;
+    margin-bottom: 5rem;
+}
+
+.figura5 img {
+      width: 50%;
+}
+.figura6 img {
+      width: 60%;
+      margin-left: 9rem;
+}
+.figura7 img {
+      width: 80%;
+   padding-right:7rem;
+}
+.figura2 img {
+  width: 50%;
+   margin-top: 0rem;
+}
+.figura3 img {
+  margin-left: 2rem;
+ width: 40%;
+}
+.figura1 {
+    margin-left: 2rem;
+     margin-top: 2rem;
+}
+.figura2 {
+    margin-left: 9rem;
+    
+}
+.figura8 img {
+margin-left: 4rem;
+width: 70%;
+}
+.textoabajo {
+text-align: center;
+margin-top: 30rem;
+ list-style: none;
+}
+a {
+    color: #ffffff; /* ← el color que quieras */
+    text-decoration: none; /* ← elimina el subrayado si quieres */
+}
+.fechaabajo {
+    text-align: right;
+    padding-right: 5rem;
+    padding-top: 9rem;
+}
+figure a {
+    display: block;
+    cursor: zoom-in;
+}

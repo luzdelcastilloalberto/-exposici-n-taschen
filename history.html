@@ -5,11 +5,16 @@
         <title>parte pagina web</title>
         <meta charset="utf-8">
         <!--Poner aqui los links para los textos y hojas de estilos-->
-     <link href="style.css"  rel="stylesheet" type="text/css">
+     <link href="history.css"  rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
      <link rel="preconnect" href="https://fonts.google.com/">
      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="js/script.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <header>
@@ -37,7 +42,9 @@
                     </p>
                 </div>
                 <figure class="figura1">
-                    <img src="img/comictienda.jpg" alt="imagen1">
+                        <a class="glightbox" href="img/comictienda.jpg">
+                         <img src="img/comictienda.jpg" alt="imagen1">
+                        </a>
                 </figure>
             </div>
             <div class="textoimagen1">
@@ -54,7 +61,9 @@
                     </p>
                 </div>
                 <figure class="figura2">
-                    <img src="img/libromagritte.jpg" alt="imagen2">
+                    <a class="glightbox" href="img/libromagritte.jpg">
+                       <img src="img/libromagritte.jpg" alt="imagen2">
+                    </a>
                 </figure>
             </div>
 
@@ -71,7 +80,9 @@
                     </p>
                 </div>
                 <figure class="figura3">
-                    <img src="img/libropicasso.jpg" alt="imagen3">
+                    <a class="glightbox" href="img/libropicasso.jpg">
+                      <img src="img/libropicasso.jpg" alt="imagen3">
+                    </a>
                 </figure>
             </div>
 
@@ -88,7 +99,9 @@
                     </p>
                 </div>
                 <figure class="figura4">
-                    <img src="img/libreriataschenmadrid.jpeg" alt="imagen4">
+                    <a class="glightbox" href="img/libreriataschenmadrid.jpeg">
+                      <img src="img/libreriataschenmadrid.jpeg" alt="imagen4">
+                    </a>
                 </figure>
             </div>
 
@@ -104,7 +117,9 @@
                     </p>
                 </div>
                 <figure class="figura5">
-                    <img src="img/anuncion90slibro.png" alt="imagen5">
+                    <a class="glightbox" href="img/anuncion90slibro.png">
+                      <img src="img/anuncion90slibro.png" alt="imagen5">
+                    </a>
                 </figure>
             </div>
 
@@ -121,7 +136,9 @@
                     </p>
                 </div>
                 <figure class="figura6">
-                    <img src="img/goatlibro.jpg" alt="imagen6">
+                    <a class="glightbox" href="img/goatlibro.jpg">
+                      <img src="img/goatlibro.jpg" alt="imagen6">
+                    </a>
                 </figure>
             </div>
 
@@ -137,8 +154,10 @@
                         mecenas comprometido con la preservación del patrimonio cultural contemporáneo.
                     </p>
                 </div>
-                <figure class="figura">
-                    <img src="img/museo.jpg" alt="imagen7">
+                <figure class="figura7">
+                    <a class="glightbox" href="img/museo.jpg">
+                     <img src="img/museo.jpg" alt="imagen7">
+                    </a>
                 </figure>
             </div>
 
@@ -153,8 +172,11 @@
                         vio nacer: que el arte de calidad debe estar al alcance de todos.
                     </p>
                 </div>
-                <figure>
-                    <img src="img/taschenultimafoto.jpg" alt="imagen8">
+                <figure class="figura8">
+                    <a class="glightbox" href="img/taschenultimafoto.jpg">
+                     <img src="img/taschenultimafoto.jpg" alt="imagen8">
+                    </a>
+
                 </figure>
             </div>
            
@@ -166,14 +188,22 @@
 
            <div class="textoabajo">
                 <p>
-                  Consulta más de nuestra historia.
+                  Consulta más de nuestra historia
                 </p>
-                <a href="https://www.taschen.com/en/"> https://www.taschen.com/en/</a>
+                <a href="https://www.taschen.com/en/"> en nuestra página web</a>
             </div> 
             <div class="fechaabajo">
                 <h2> 1980-2026</h2>
             </div>
 
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        <script>
+         GLightbox({
+             touchNavigation: true,
+             loop: false,
+             zoomable: true
+            });
+       </script>
     </body>
 </html>
