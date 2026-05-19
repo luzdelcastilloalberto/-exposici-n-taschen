@@ -137,7 +137,7 @@ a {
   }
 
   /* ── imagen de fondo ── */
-.fondo {
+.fondoluz {
     position: absolute;
     inset: 0;
     display: flex;
@@ -145,7 +145,7 @@ a {
     align-items: center;
 }
 
-.fondo h1 {
+.fondoluz h1 {
     margin: 0;
     font-size: 35vw;
 }
@@ -435,3 +435,7 @@ p {
     line-height: 2rem;
     color: yellow;
   }
+
+  /* TICKETS.............................. */
+
+  

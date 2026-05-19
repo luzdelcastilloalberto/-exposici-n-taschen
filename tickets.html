@@ -1,23 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taschen | Comprar Entradas</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/tickets.css">
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/tickets.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-</head>
+  </head>
 
-<body>
+  <body>
     <nav id="menu">
       <ul>
         <li class="logo">
-          <a href="#home"> TXT</a>
+          <a href="index.html"> TXT</a>
         </li>
 
         <li><a href="#historia">Nuestra historia</a></li>
@@ -42,124 +41,128 @@
     </nav>
 
     <main class="pagina">
-        <section class="bloque">
-            <div class="imagen">
-                <img src="img/señor taschen.jpg" alt="Señor Taschen">
-            </div>
-            <div class="texto">
-                <h1>LOREM IPSUM</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse a ipsum a tortor dapibus pharetra id sit amet odio.
-                    Praesent luctus nunc, lobortis pharetra velit eget,
-                    consectetur egestas quam. Curabitur lacinia placerat consectetur.
-                    Duis tempor ligula vitae nisi scelerisque, quis facilisis elit
-                    porttitor. Integer at velit et nibh posuere tempus.
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-                    per inceptos himenaeos. Mauris nibh magna, pellentesque dignissim
-                    vulputate non, sagittis quis felis.
-                </p>
-            </div>
+      <section class="bloque">
+        <div class="imagen">
+          <img src="img/señor taschen.jpg" alt="Señor Taschen" />
+        </div>
+        <div class="texto">
+          <h1>TASCHEN X THYSSEN</h1>
+          <p>
+            La exposición ofrece un recorrido cronológico por la historia de
+            Taschen y por la evolución del consumo del arte y la cultura visual
+            desde los años 90 hasta la actualidad. A través de primeras
+            ediciones, publicaciones icónicas y libros de coleccionismo ya
+            descatalogados, la muestra explora cómo Taschen transformó el libro
+            de arte en un objeto accesible, visual y global. Entre las piezas
+            expuestas destaca una de las primeras ediciones de Magritte Basic
+            Art, símbolo de la democratización del arte editorial contemporáneo.
+          </p>
+        </div>
+      </section>
+
+      <section class="proceso">
+        <section class="pasos">
+          <div class="paso activo" data-paso="1">1. ¿CUÁNDO QUIERES VENIR?</div>
+          <div class="paso" data-paso="2">2. ¿A QUÉ HORA?</div>
+          <div class="paso" data-paso="3">3. DATOS PERSONALES</div>
+          <div class="paso" data-paso="4">4. CONFIRMACIÓN</div>
         </section>
 
-        <section class="proceso">
-            <section class="pasos">
-                <div class="paso activo" data-paso="1">1. ¿CUÁNDO QUIERES VENIR?</div>
-                <div class="paso" data-paso="2">2. ¿A QUÉ HORA?</div>
-                <div class="paso" data-paso="3">3. DATOS PERSONALES</div>
-                <div class="paso" data-paso="4">4. CONFIRMACIÓN</div>
-            </section>
-
-            <section class="fases">
-                <section class="fase visible" id="fase1">
-                    <div class="calendario">
-                        <div class="cabecera">
-                            <button id="mesanterior">‹</button>
-                            <h3 id="mesactual"></h3>
-                            <button id="messiguiente">›</button>
-                        </div>
-                        <div class="dias">
-                            <div>L</div>
-                            <div>M</div>
-                            <div>X</div>
-                            <div>J</div>
-                            <div>V</div>
-                            <div>S</div>
-                            <div>D</div>
-                        </div>
-                        <div id="listafechas" class="fechas"></div>
-                    </div>
-                </section>
-
-                <section class="fase" id="fase2">
-                    <div id="listahoras" class="horas"></div>
-                </section>
-
-                <section class="fase" id="fase3">
-                    <div class="formulario">
-                        <input type="text" id="nombre" placeholder="Nombre y apellidos">
-                        <input type="email" id="correo" placeholder="Correo electrónico">
-                        <select id="tipoentrada">
-                            <option value="15">Entrada general - 15€</option>
-                            <option value="10">Entrada personas con discapacidad - 10€</option>
-                            <option value="7">Entrada +65 años - 7€</option>
-                            <option value="5">Entrada niños hasta 10 años - 5€</option>
-                        </select>
-
-                        <div class="cantidad">
-                            <label>Total de entradas</label>
-                            <div class="controles">
-                                <button id="restar">-</button>
-                                <span id="contador">1</span>
-                                <button id="sumar">+</button>
-                            </div>
-                        </div>
-
-                        <div class="total">
-                            Precio total:
-                            <span id="preciototal">15€</span>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="fase" id="fase4">
-                    <h2>Gracias por tu compra</h2>
-                    <div class="tarjeta">
-                        <div class="imagenfinal">
-                            <img src="img/señor taschen.jpg" alt="Taschen">
-                        </div>
-                        <div class="textofinal">
-                            <h3 id="titulofinal"></h3>
-                            <div id="datosfinal"></div>
-                        </div>
-                        <div class="codigo">
-                            <img src="img/codigo.png" alt="QR">
-                            <button class="descargapdf">Descargar PDF</button>
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <div class="navegacion" id="navegacioncompra">
-                <button id="anterior" class="boton oculto">Atrás</button>
-                <button id="siguiente" class="boton">Siguiente</button>
+        <section class="fases">
+          <section class="fase visible" id="fase1">
+            <div class="calendario">
+              <div class="cabecera">
+                <button id="mesanterior">‹</button>
+                <h3 id="mesactual"></h3>
+                <button id="messiguiente">›</button>
+              </div>
+              <div class="dias">
+                <div>L</div>
+                <div>M</div>
+                <div>X</div>
+                <div>J</div>
+                <div>V</div>
+                <div>S</div>
+                <div>D</div>
+              </div>
+              <div id="listafechas" class="fechas"></div>
             </div>
+          </section>
+
+          <section class="fase" id="fase2">
+            <div id="listahoras" class="horas"></div>
+          </section>
+
+          <section class="fase" id="fase3">
+            <div class="formulario">
+              <input type="text" id="nombre" placeholder="Nombre y apellidos" />
+              <input
+                type="email"
+                id="correo"
+                placeholder="Correo electrónico"
+              />
+              <select id="tipoentrada">
+                <option value="15">Entrada general - 15€</option>
+                <option value="10">
+                  Entrada personas con discapacidad - 10€
+                </option>
+                <option value="7">Entrada +65 años - 7€</option>
+                <option value="5">Entrada niños hasta 10 años - 5€</option>
+              </select>
+
+              <div class="cantidad">
+                <label>Total de entradas</label>
+                <div class="controles">
+                  <button id="restar">-</button>
+                  <span id="contador">1</span>
+                  <button id="sumar">+</button>
+                </div>
+              </div>
+
+              <div class="total">
+                Precio total:
+                <span id="preciototal">15€</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="fase" id="fase4">
+            <h2>Gracias por tu compra</h2>
+            <div class="tarjeta">
+              <div class="imagenfinal">
+                <img src="img/señor taschen.jpg" alt="Taschen" />
+              </div>
+              <div class="textofinal">
+                <h3 id="titulofinal"></h3>
+                <div id="datosfinal"></div>
+              </div>
+              <div class="codigo">
+                <img src="img/codigo.png" alt="QR" />
+                <button class="descargapdf">Descargar PDF</button>
+              </div>
+            </div>
+          </section>
         </section>
+
+        <div class="navegacion" id="navegacioncompra">
+          <button id="anterior" class="boton oculto">Atrás</button>
+          <button id="siguiente" class="boton">Siguiente</button>
+        </div>
+      </section>
     </main>
 
     <div class="fondo" id="fondocompra">
-        <div class="ventana">
-            <div class="info">
-                <h3>Confirmación de compra</h3>
-                <div id="resumencompra"></div>
-            </div>
-            <div class="acciones">
-                <button id="aceptarcompra">Aceptar</button>
-            </div>
+      <div class="ventana">
+        <div class="info">
+          <h3>Confirmación de compra</h3>
+          <div id="resumencompra"></div>
         </div>
+        <div class="acciones">
+          <button id="aceptarcompra">Aceptar</button>
+        </div>
+      </div>
     </div>
 
     <script src="javascript.js"></script>
-</body>
-
+  </body>
 </html>
