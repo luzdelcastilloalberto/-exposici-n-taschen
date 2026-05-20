@@ -2,12 +2,94 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Bebas neue", "Roboto";
+    
+}
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
     background-color: #000000;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #ffffff;
+}
+
+#menu {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color:yellow;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+   line-height: 1.6; 
+ 
+}
+
+#menu img {
+  /* Tamaño de los iconos del menú */
+  width: 30px;
+  height: 30px;
+}
+
+#menu ul {
+  /* Lista horizontal sin viñetas */
+  list-style: none;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 42px;
+ 
+}
+
+#menu > ul > li > a {
+    color: rgb(0, 0, 0);
+    font-weight:bold;
+    text-decoration: none;
+   font-size:20px;
+   font-family:'Roboto';
+  padding-top: 5px;
+}
+
+
+/* todos los li separados 4.5rem entre sí */
+#menu ul li + li {
+    margin-left: 4.5rem;
+}
+
+/* solo el primer .tickets tiene 417px respecto al grupo anterior */
+#menu ul li.tickets:not(.icono) {
+    margin-left: 441px;
+}
+
+/* el icono vuelve a 4.5rem */
+#menu ul li.icono {
+    margin-left: 4.5rem;
+}
+
+#menu ul li.icono i {
+  padding-top: 5px;
+    font-size: 25px;
+    color: #000000;
+
+}
+
+#menu ul li.logo a {
+    font-size: 30px;
+    font-family: "Bebas Neue", cursive;
+    color: #000000;
+    text-decoration: none;
+}
+
+#menu ul li.tickets a {
+    color: #000000;
+ }   
+
+ #menu > ul > li:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s;
 }
 
 /* Maquetación títulos*/
