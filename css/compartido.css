@@ -302,6 +302,16 @@ a {
   font-family: 'Roboto', sans-serif;
   font-style: italic;
 }
+.page-history .textoabajo {
+  position: relative;
+  z-index: 1;
+}
+
+.page-history .textoabajo a {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
 .page-history a { color: #ffffff; text-decoration: none; }
 .page-history .todo { position: relative; }
 .page-history .todo > img {
@@ -505,4 +515,134 @@ a {
 @keyframes aparecer {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  background-color: #5b0090;
+  color: #fff;
+  
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-top {
+  display: flex;
+ justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 40px;}
+footer {
+  background-color: #5b0090;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 40px;
+  padding: 40px 48px 24px; /* ← el padding va aquí */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 32px;
+
+}
+/* ── Iconos redes sociales ── */
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+   padding-left: 20px;
+}
+
+.footer-social i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+
+.footer-social i:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  
+}
+
+/* ── Copyright ── */
+.footer-copy {
+  margin-bottom: 28px;
+   padding-left: 20px;
+}
+
+/* ── Links legales ── */
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 10px;
+  margin-bottom: 32px;
+  padding-left: 20px;
+}
+
+.footer-legal p {
+  margin: 0;
+}
+
+/* ── Links generales ── */
+footer a {
+  color: #fff;
+  text-decoration: underline;
+
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* ── Pie: logos + transporte ── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.footer-logos img {
+  height: 52px;
+  width: auto;
+}
+
+.footer-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-location figure {
+  margin: 0;
+}
+
+.footer-location img {
+  width: 36px;
+  vertical-align: middle;
+}
+
+.footer-location p {
+  text-align: right;
+  line-height: 1.7;
+  padding-right: 30px;
 }
