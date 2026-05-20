@@ -72,6 +72,21 @@ a {
   transition: transform 0.3s;
 }
 
+@media (max-width: 1180px) {
+  #menu ul li.tickets:not(.icono) {
+    margin-left: auto;
+  }
+
+  #menu ul {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  #menu ul li + li {
+    margin-left: 2rem;
+  }
+}
+
 /* landing............................ */
 
 .page-index {
@@ -192,7 +207,8 @@ a {
 }
 .page-index #info {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   align-items: center;
   padding-bottom: 3rem;
 }
@@ -216,7 +232,7 @@ a {
 }
 .page-index .contenedor-tickets {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   padding: 3rem;
@@ -224,13 +240,13 @@ a {
 .page-index .columna-izquierda {
   width: 30%;
   padding: 0 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 5rem;
 }
 .page-index .columna-derecha {
   width: 50%;
   text-align: justify;
   padding: 0 3rem;
-  padding-bottom: 6rem;
+  padding-bottom: 5rem;
 
   /* estilos de botones................................ */
 }
@@ -341,6 +357,43 @@ a {
   font-size: 2rem;
   line-height: 2rem;
   color: yellow;
+}
+
+@media (max-width: 1180px) {
+  .page-index .contenedor-tickets {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .page-index .columna-izquierda {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-index .columna-derecha {
+    width: 100%;
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (max-width: 835px) {
+  .page-index h2.exposición,
+  .page-index h2.fechas {
+    font-size: 1rem;
+  }
+  .page-index .quote p {
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+
+  .page-index .autor p {
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
 }
 
 /* historia.................................. */
