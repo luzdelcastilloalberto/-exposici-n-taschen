@@ -1,7 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: "Bebas neue", "Roboto";
+    font-family: "Bebas Neue", "Roboto";
     
 }
 html, body {
@@ -94,14 +94,14 @@ body {
 
 /* Maquetación títulos*/
 h1 {
- font-family: 'Bebas neue', regular;
+ font-family: 'Bebas Neue', regular;
  text-align: center;
  font-size: 14vw;
  font-weight: 400;
  margin-top: 7rem;
 }
 h2 {
-  font-family: 'Bebas neue', regular;
+  font-family: 'Bebas Neue', regular;
     font-size: 4vw; 
     font-weight: 200; 
     margin-top: -3rem;
@@ -118,7 +118,7 @@ h3 {
 }
 h4 {
  text-align: right;
- font-family: 'roboto', italic ;
+ font-family: 'Roboto', italic ;
   font-size: 3vw;
     font-weight: 100; 
     margin-top: 6rem;
