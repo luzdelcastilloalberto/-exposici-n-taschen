@@ -11,3 +11,17 @@ function goTo(n) {
 }
 
 setInterval(() => goTo((current + 1) % slides.length), 5000);
+
+function toggleMenu() {
+  if (window.innerWidth <= 700) {
+    let menu = document.getElementById("menu");
+    menu.classList.toggle("abierto");
+  }
+}
+
+function closeMenu() {
+  if (window.innerWidth <= 700) {
+    let menu = document.getElementById("menu");
+    menu.classList.remove("abierto");
+  }
+}
