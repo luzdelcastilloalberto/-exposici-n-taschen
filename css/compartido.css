@@ -5,10 +5,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 html,
 body {
+  overflow-x: hidden;
   overflow-x: clip;
+html {
+  overflow-x: hidden;
   max-width: 100%;
 }
 
@@ -17,9 +19,9 @@ a {
   text-decoration: none;
 }
 
-/* nav........................................ */
+/* /* nav.......................... */
 #menu {
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 100;
   background-color: yellow;
@@ -28,7 +30,6 @@ a {
   width: 100%;
   line-height: 1.6;
 }
-
 #menu img {
   width: 30px;
   height: 30px;
@@ -45,6 +46,7 @@ a {
   font-weight: bold;
   text-decoration: none;
 }
+
 #menu ul li + li {
   margin-left: 4.5rem;
 }
@@ -72,9 +74,11 @@ a {
   transform: scale(1.01);
   transition: transform 0.3s;
 }
-/* Se oculta el icono hamburguesa */
+
+/* ocultar menu hamburguesa */
 #menu > ul > li:first-child {
   display: none;
+  color: black;
 }
 
 @media (max-width: 1180px) {
@@ -104,45 +108,41 @@ a {
   }
 }
 
-/* Media query para pantallas de menos de 620px */
+/* Media query para pantallas de menos de 700px */
 @media screen and (max-width: 700px) {
-  header,
-  nav {
-    padding: 1rem 10%;
-  }
-  /* Opciones en vertical. Se cambia la disposición del flexbox */
-  #menu > ul {
-    flex-direction: column;
-  }
-  /* Se muestra el icono hamburguesa */
-  #menu > ul > li:first-child {
-    display: block;
-    /* Se cambia el puntero del ratón */
-    cursor: pointer;
-  }
-  /* Se ocultan las opciones */
-  #menu > ul > li:not(:first-child) {
-    display: none;
-  }
-  /* Se le pone la clase abierto al nav cuando el menú se abre. Esta clase se añadirá con JavaScript */
-  #menu.abierto > ul > li:not(:first-child) {
-    display: block;
-  }
-  #menu > ul > li:first-child {
-    display: flex;
-    align-items: center;
-    order: -1;
-    margin-right: auto;
-  }
-
-  #menu > ul > li:first-child i {
-    color: black;
-    font-size: 25px;
+  #menu {
+    height: auto;
   }
 
   #menu ul {
-    justify-content: flex-start;
-    padding: 0 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Se muestra el icono hamburguesa */
+  #menu > ul > li:first-child {
+    display: block;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 0.5rem 0;
+  }
+
+  /* Se ocultan todas las opciones menos el icono */
+  #menu > ul > li:not(:first-child) {
+    display: none;
+  }
+
+  /* Cuando el menú tiene la clase "abierto", se muestran las opciones */
+  #menu.abierto > ul > li:not(:first-child) {
+    display: block;
+    margin-left: 0 !important; /* Anula los márgenes del menú horizontal */
+    padding: 0.4rem 0;
+  }
+
+  /* Quitamos el margin-left especial de .tickets en móvil */
+  #menu ul li.tickets:not(.icono) {
+    margin-left: 0;
   }
 }
 
@@ -167,8 +167,6 @@ a {
   font-size: 1rem;
   line-height: 1.15rem;
 }
-
-/* taschen de fondo...................... */
 .page-index h1 {
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
@@ -185,7 +183,7 @@ a {
 .page-index .header {
   position: relative;
   width: 100%;
-  height: 110vh;
+  height: 95vh;
   overflow: hidden;
   background: #000000;
 }
@@ -216,8 +214,6 @@ a {
   font-size: 1.5rem;
   color: white;
 }
-
-/* contenedor de img q va cambiando................ */
 .page-index .header h2 {
   margin: 0;
 }
@@ -266,13 +262,10 @@ a {
 }
 .page-index #info {
   display: flex;
-  min-height: 100vh;
   height: auto;
   align-items: center;
   padding-bottom: 3rem;
 }
-
-/* sección de info........................... */
 .page-index .columna-izquierda span {
   font-weight: bold;
   color: white;
@@ -291,7 +284,7 @@ a {
 }
 .page-index .contenedor-tickets {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
   padding: 3rem;
@@ -299,13 +292,13 @@ a {
 .page-index .columna-izquierda {
   width: 30%;
   padding: 0 3rem;
-  padding-bottom: 5rem;
-  margin: 0.2rem 0 !important;
+  padding-bottom: 1rem;
 }
 .page-index .columna-derecha {
   width: 50%;
   text-align: justify;
   padding: 0 3rem;
+
   padding-bottom: 5rem;
 
   /* estilos de botones................................ */
@@ -317,6 +310,16 @@ a {
 }
 .page-index .btn-comprar a {
   color: black;
+}
+.page-index .btn-comprar:hover {
+  background: white;
+  color: black;
+  transition: 0.3s ease;
+}
+.page-index .btn-comprar {
+  background-color: yellow;
+  color: black;
+  border: none;
 }
 .page-index .btn-comprar:hover {
   background: white;
@@ -340,9 +343,6 @@ a {
   gap: 1em;
   padding: 2rem 4rem;
 }
-
-/* galeria desenfocada........................ */
-
 .page-index .galeria > figure {
   flex: 27%;
   filter: blur(10px);
@@ -365,7 +365,6 @@ a {
 .page-index .galeria > figure:hover {
   filter: none;
 }
-
 @keyframes movimiento {
   0% {
     transform: translateY(0);
@@ -377,8 +376,6 @@ a {
     transform: translateY(0);
   }
 }
-/* frase final con foto.................. */
-
 .page-index #frasefoto {
   background-image: url("../img/señor taschen.jpg");
   background-size: cover;
@@ -436,11 +433,42 @@ a {
     flex-direction: column;
     align-items: center;
   }
+  .page-index .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
 
+  .page-index .botones button {
+    width: auto;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
   .page-index .columna-derecha {
     width: 100%;
     padding: 0 2rem 2rem;
   }
+
+  .page-index p {
+    margin: 1rem 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-index .botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+  }
+}
+.page-index .botones button {
+  width: auto;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 835px) {
@@ -471,23 +499,59 @@ a {
     align-items: center;
     width: 100%;
   }
+}
 
-  .page-index .botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+@media screen and (max-width: 490px) {
+  /* se aumenta la altura del ehader para q ls h2 no queden pegado a los dots */
+  .page-index .header {
+    height: 100vh;
   }
 
-  .page-index .botones button {
-    width: auto;
-    padding: 0.8rem 1.2rem;
+  .page-index .dots {
+    bottom: 8rem;
+  }
+
+  .page-index h2.exposición {
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* impide q el texto se divida en 2 lineas */
+    white-space: nowrap;
     font-size: 1rem;
+  }
+
+  .page-index h2.fechas {
+    bottom: 1.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+
+  .page-index .contenedor {
+    width: 300px;
+    height: 400px;
+  }
+
+  .page-index .botones {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* /* justificar p a al izda no rios */
+  .page-index p {
+    text-align: left;
+  }
+
+  .page-index .galeria {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 
 /* historia.................................. */
+
 .page-history {
   background-color: #000000;
   font-family: "Roboto", sans-serif;
@@ -498,13 +562,13 @@ a {
   text-align: center;
   font-size: 14vw;
   font-weight: 400;
-  margin-top: 7rem;
+  margin-top: 2rem;
 }
 .page-history h2 {
   font-family: "Bebas Neue", cursive;
   font-size: 4vw;
   font-weight: 200;
-  margin-top: -3rem;
+  margin-top: rem;
   margin-left: 3rem;
 }
 .page-history h3 {
@@ -513,7 +577,7 @@ a {
   text-align: center;
   font-size: 4vw;
   font-weight: 200;
-  margin-top: 6rem;
+  margin-top: 4rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
@@ -688,8 +752,7 @@ a {
   padding-top: 9rem;
 }
 
-/* compra de entradas......................... */
-
+/* tickets.................................. */
 .page-tickets {
   background: #f5f5f5;
   font-family: "Roboto", sans-serif;
@@ -757,6 +820,7 @@ a {
   align-items: flex-start;
   box-sizing: border-box;
 }
+
 .page-tickets .texto h1 {
   font-size: 5rem;
   line-height: 0.9;
@@ -777,6 +841,7 @@ a {
   padding: 40px 0 5px 0;
   overflow: visible;
 }
+
 .page-tickets .pasos {
   position: sticky;
   top: 70px;
@@ -819,33 +884,27 @@ a {
   background: black !important;
   color: #f2eb00 !important;
 }
-
 .page-tickets .fases {
   width: 100%;
   max-width: 1100px;
   margin: auto;
 }
-
 .page-tickets .fase {
   display: none;
   animation: aparecer 0.4s ease;
 }
-
 .page-tickets .fase.visible {
   display: block;
 }
-
 .page-tickets .fase h2 {
   margin-bottom: 40px;
   color: black;
   font-size: 3.5rem;
 }
-
 .page-tickets .calendario {
   max-width: 560px;
   margin: auto;
 }
-
 .page-tickets .cabecera {
   margin-bottom: 18px;
   display: flex;
@@ -853,12 +912,10 @@ a {
   justify-content: center;
   gap: 22px;
 }
-
 .page-tickets .cabecera h3 {
   color: black;
   font-size: 1.4rem;
 }
-
 .page-tickets .cabecera button {
   width: 40px;
   height: 40px;
@@ -872,25 +929,21 @@ a {
   font-weight: bold;
   transition: 0.3s;
 }
-
 .page-tickets .cabecera button:hover {
   background: #f2eb00;
 }
-
 .page-tickets .dias,
 .page-tickets .fechas {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 7px;
 }
-
 .page-tickets .dias div {
   color: black;
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
 }
-
 .page-tickets .dia {
   aspect-ratio: 1/1;
   border: 1px solid #999;
@@ -903,21 +956,17 @@ a {
   font-size: 0.92rem;
   transition: 0.3s;
 }
-
 .page-tickets .dia:hover {
   background: #f2eb00;
 }
-
 .page-tickets .dia.elegido {
   background: black !important;
   color: #f2eb00 !important;
 }
-
 .page-tickets .dia.bloqueado {
   opacity: 0.3;
   pointer-events: none;
 }
-
 .page-tickets .horas {
   max-width: 760px;
   margin: auto;
@@ -925,7 +974,6 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
-
 .page-tickets .hora {
   padding: 11px 10px;
   border: 1px solid #999;
@@ -936,17 +984,14 @@ a {
   text-align: center;
   transition: 0.3s;
 }
-
 .page-tickets .hora:hover {
   background: black;
   color: #f2eb00;
 }
-
 .page-tickets .hora.elegido {
   background: black !important;
   color: #f2eb00 !important;
 }
-
 .page-tickets .formulario {
   max-width: 420px;
   margin: 15vh auto;
@@ -954,7 +999,6 @@ a {
   flex-direction: column;
   gap: 14px;
 }
-
 .page-tickets .formulario input,
 .page-tickets .formulario select {
   height: 46px;
@@ -1207,7 +1251,7 @@ a {
   }
 }
 
-/* footer {
+footer {
   background-color: #5b0090;
   color: #fff;
 
@@ -1233,13 +1277,67 @@ footer {
   flex-wrap: wrap;
   gap: 0 40px;
   padding: 40px 48px 24px; /* ← el padding va aquí */
-/* border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 32px;
-} */
+}
 /* ── Iconos redes sociales ── */
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
 
-/* ──  logos + transporte ── */
-/* .footer-bottom {
+.footer-social i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.footer-social i:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Copyright ── */
+.footer-copy {
+  margin-bottom: 28px;
+  padding-left: 20px;
+}
+
+/* ── Links legales ── */
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 10px;
+  margin-bottom: 32px;
+  padding-left: 20px;
+}
+
+.footer-legal p {
+  margin: 0;
+}
+
+/* ── Links generales ── */
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* ── Pie: logos + transporte ── */
+.footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1257,238 +1355,334 @@ footer {
 .footer-logos img {
   height: 52px;
   width: auto;
-} */
+}
 
-/* .footer-location {
+.footer-location {
   display: flex;
   align-items: flex-start;
   gap: 12px;
 }
-/*  */
-/* .footer-location figure {
+
+.footer-location figure {
   margin: 0;
 }
 
 .footer-location img {
   width: 36px;
   vertical-align: middle;
-} */
-/*  */
-/* .footer-location p {
+}
+
+.footer-location p {
   text-align: right;
   line-height: 1.7;
   padding-right: 30px;
-} */
-
-/* ── footer ── */
-
-footer {
-  background-color: #5b0090;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
 }
 
-/* top nav */
-footer .footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0 40px;
-  padding: 40px 48px 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  margin-bottom: 32px;
-}
-
-footer .footer-top p {
+.page-index footer p {
   margin: 0;
   width: auto;
-  font-size: 14px;
-  line-height: 1.5;
   text-align: left;
-  font-style: normal;
-  color: #fff;
-}
-
-footer .footer-top a {
-  color: #fff;
-  text-decoration: underline;
-  font-weight: normal;
-}
-
-footer .footer-top a:hover {
-  opacity: 0.8;
-}
-
-/* redes sociales */
-footer .footer-social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 16px;
-  padding-left: 20px;
-}
-
-footer .footer-social i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-footer .footer-social i:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* copyright */
-footer .footer-copy {
-  margin: 0 0 28px 0;
-  padding-left: 20px;
-  width: auto;
-  color: #fff;
   font-size: 14px;
-  line-height: 1.5;
-  text-align: left;
-  font-style: normal;
-}
-
-/* links legales */
-footer .footer-legal {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  column-gap: 40px;
-  row-gap: 10px;
-  margin-bottom: 32px;
-  padding-left: 20px;
-}
-
-footer .footer-legal p {
-  margin: 0;
-  width: auto;
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: left;
-  font-style: normal;
-  color: #fff;
-}
-
-footer .footer-legal a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-footer .footer-legal a:hover {
-  opacity: 0.8;
-}
-
-/* bottom logos + ubicacion */
-footer .footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px 48px;
-}
-
-footer .footer-logos {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin: 0;
-  width: auto;
-}
-
-footer .footer-logos img {
-  height: 52px;
-  width: auto;
-}
-
-footer .footer-location {
-  display: flex;
-  align-items: flex-start;
-}
-
-footer .footer-location p {
-  text-align: right;
   line-height: 1.7;
-  padding-right: 30px;
-  color: #fff;
-  font-style: italic;
-  font-size: 14px;
-  width: auto;
-  margin: 0;
 }
-/* TABLET (max 1024px) tickets*/
-@media (max-width: 1024px) {
-  .page-tickets .bloque {
-    max-width: 95%;
-    height: auto;
-    flex-direction: column;
+/* responsove tickets.................................. */
+
+@media screen and (max-width: 1319px) {
+  /* --- Nav --- */
+
+  /* --- Header --- */
+  .page-history h1 {
+    font-size: 18vw;
+    margin-top: 1.5rem;
+  }
+  .page-history h2 {
+    font-size: 6vw;
+    margin-top: 0;
+  }
+  .page-history h3 {
+    font-size: 5vw;
+    margin-top: 2rem;
+  }
+  .page-history h4 {
+    font-size: 4vw;
+    margin-top: 2rem;
+    margin-right: 2rem;
   }
 
-  .page-tickets .imagen {
+  /* --- Ocultar SVG --- */
+  .page-history .todo > img {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* --- Quitar transform del todo --- */
+  .page-history .todo {
+    transform: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* --- Bloques más grandes y compactos --- */
+  .page-history .textoimagen,
+  .page-history .textoimagen1,
+  .page-history .textoimagen2,
+  .page-history .textoimagen3,
+  .page-history .textoimagen4,
+  .page-history .textoimagen5,
+  .page-history .textoimagen6,
+  .page-history .textoimagen7 {
+    margin: 2rem auto !important; /* auto para centrar */
+    padding: 0 3rem !important; /* padding igual en ambos lados */
+    gap: 2rem;
+    align-items: center;
     width: 100%;
-    height: 220px;
+    box-sizing: border-box;
   }
 
-  .page-tickets .texto {
+  footer .footer-top a:hover {
+    opacity: 0.8;
+  }
+
+  /* redes sociales */
+  footer .footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+
+  .page-history .figura7 {
+    margin: 0;
+    width: 45%;
+    padding: 0;
+  }
+
+  .page-history .figura7 img {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+  }
+  /* --- Texto final y fecha --- */
+  .page-history .textoabajo {
+    margin-top: 5rem;
+    font-size: 4vw;
+  }
+  .page-history .fechaabajo {
+    padding-right: 2rem;
+    padding-top: 3rem;
+  }
+}
+
+/* ===================== RESPONSIVE MÓVIL (max-width: 768px) ===================== */
+@media screen and (max-width: 768px) {
+  /* --- Ocultar SVG y sustituir por línea CSS --- */
+  .page-history .todo > img {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .page-history .todo {
+    position: relative;
+    padding: 0 1.5rem;
+  }
+
+  .page-history .todo::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  /* --- Bloques en columna --- */
+  .page-history .textoimagen,
+  .page-history .textoimagen1,
+  .page-history .textoimagen2,
+  .page-history .textoimagen3,
+  .page-history .textoimagen4,
+  .page-history .textoimagen5,
+  .page-history .textoimagen6,
+  .page-history .textoimagen7 {
+    flex-direction: column !important;
+    align-items: center;
+    width: 45%;
+    margin: 3rem auto !important;
+    padding: 0;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* --- Punto en la línea por cada bloque --- */
+  .page-history .textoimagen::before,
+  .page-history .textoimagen1::before,
+  .page-history .textoimagen2::before,
+  .page-history .textoimagen3::before,
+  .page-history .textoimagen4::before,
+  .page-history .textoimagen5::before,
+  .page-history .textoimagen6::before,
+  .page-history .textoimagen7::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .page-history .texto {
     width: 100%;
-    padding: 30px 30px;
   }
-
-  .page-tickets .texto h1 {
-    font-size: 3.5rem;
-  }
-
-  .page-tickets .pasos {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 95%;
-  }
-
-  .page-tickets .fases {
-    max-width: 95%;
-    padding: 0 20px;
-  }
-
-  .page-tickets .navegacion {
-    max-width: 95%;
-    padding: 0 20px;
-  }
-
-  .page-tickets .tarjeta {
-    max-width: 95%;
-    height: auto;
-    flex-direction: column;
-  }
-
-  .page-tickets .imagenfinal {
+  .page-history figure {
     width: 100%;
-    height: 200px;
+    margin: 0;
   }
 
-  .page-tickets .textofinal {
+  .page-history .figura1 img,
+  .page-history .figura2 img,
+  .page-history .figura3 img,
+  .page-history .figura4 img,
+  .page-history .figura5 img,
+  .page-history .figura6 img,
+  .page-history .figura7 img,
+  .page-history .figura8 img {
     width: 100%;
-    padding: 24px 28px;
+    margin: 0;
+    padding: 0;
   }
 
-  .page-tickets .codigo {
+  .page-history .figura1,
+  .page-history .figura2,
+  .page-history .figura3,
+  .page-history .figura4,
+  .page-history .figura5,
+  .page-history .figura6,
+  .page-history .figura7,
+  .page-history .figura8 {
+    margin: 0;
     width: 100%;
-    padding: 20px;
-    flex-direction: row;
+  }
+
+  footer .footer-legal a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  footer .footer-legal a:hover {
+    opacity: 0.8;
+  }
+
+  /* bottom logos + ubicacion */
+  footer .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    padding: 20px 48px;
   }
-}
 
-/* MÓVIL (max 600px) tickets */
-@media (max-width: 600px) {
+  footer .footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+    width: auto;
+  }
+
+  footer .footer-logos img {
+    height: 52px;
+    width: auto;
+  }
+
+  footer .footer-location {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  footer .footer-location p {
+    text-align: right;
+    line-height: 1.7;
+    padding-right: 30px;
+    color: #fff;
+    font-style: italic;
+    font-size: 14px;
+    width: auto;
+    margin: 0;
+  }
+  /* TABLET (max 1024px) tickets*/
+  @media (max-width: 1024px) {
+    .page-tickets .bloque {
+      max-width: 95%;
+      height: auto;
+      flex-direction: column;
+    }
+
+    .page-tickets .imagen {
+      width: 100%;
+      height: 220px;
+    }
+
+    .page-tickets .texto {
+      width: 100%;
+      padding: 30px 30px;
+    }
+
+    .page-tickets .texto h1 {
+      font-size: 3.5rem;
+    }
+
+    .page-tickets .pasos {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 95%;
+    }
+
+    .page-tickets .fases {
+      max-width: 95%;
+      padding: 0 20px;
+    }
+
+    .page-tickets .navegacion {
+      max-width: 95%;
+      padding: 0 
+    }
+
+    .page-tickets .tarjeta {
+      max-width: 95%;
+      height: auto;
+      flex-direction: column;
+    }
+
+    .page-tickets .imagenfinal {
+      width: 100%;
+      height: 200px;
+    }
+
+    .page-tickets .textofinal {
+      width: 100%;
+      padding: 24px 28px;
+    }
+
+    .page-tickets .codigo {
+      width: 100%;
+      padding: 20px;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+
+  /* MÓVIL (max 600px) tickets */
+  @media (max-width: 600px) {
+  }
   .page-tickets .pagina {
     padding-top: 60px;
   }
@@ -1657,6 +1851,7 @@ footer .footer-location p {
     font-size: 0.9rem;
   }
 }
+<<<<<<< HEAD
 
 /* responsivefooter tablet (max 1024px) */
 @media (max-width: 1024px) {
