@@ -91,7 +91,7 @@ a {
   #menu > ul {
     flex-direction: column;
     justify-content: flex-start !important;
-    padding: 0 1rem;
+    padding: 0 5rem;
   }
   /* Se muestra el icono hamburguesa */
   #menu > ul > li:first-child {
