@@ -844,9 +844,14 @@ a {
   min-height: 95vh;
   padding: 40px 0 5px 0;
   overflow: visible;
+  overflow: visible;
 }
 
 .page-tickets .pasos {
+  position: sticky;
+  top: 70px;
+  z-index: 50;
+  overflow: visible;
   position: sticky;
   top: 70px;
   z-index: 50;
@@ -859,6 +864,9 @@ a {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   border-radius: 28px;
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
   background: transparent;
   border: 1px solid transparent;
   box-shadow: none;
@@ -1061,6 +1069,8 @@ a {
   cursor: pointer;
   font-size: 0.95rem;
   transition: 0.3s;
+  border-radius: 28px;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .page-tickets .boton:hover {
@@ -1733,7 +1743,7 @@ footer a:hover {
 
     .page-tickets .navegacion {
       max-width: 95%;
-      padding: 0 20px;
+      padding: 0 
     }
 
     .page-tickets .tarjeta {
