@@ -980,12 +980,12 @@ a {
 
 .page-tickets .ventana {
   width: 90%;
-  max-width: 700px;
-  padding: 30px;
+  max-width: 550px;
+  padding: 18px 22px;
   background: white;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
 }
 
 .page-tickets .info h3 {
@@ -997,8 +997,19 @@ a {
 .page-tickets #resumencompra {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px 25px;
+  gap: 4px 18px;
   color: black !important;
+}
+
+.page-tickets #resumencompra p,
+.page-tickets #resumencompra div,
+.page-tickets #resumencompra span {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.page-tickets #resumencompra {
+  align-items: start;
 }
 
 .page-tickets .acciones {
