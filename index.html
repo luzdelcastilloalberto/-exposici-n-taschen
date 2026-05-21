@@ -26,32 +26,32 @@
 
   <body class="page-index">
     <!-- Maquetación del menu de navegación........................... -->
-    <nav id="menu">
-      <ul>
-        <li class="logo">
-          <a href="#home"> TXT</a>
-        </li>
-
-        <li><a href="history.html">Nuestra historia</a></li>
+   <nav id="menu">
+    <ul>
         <li>
-          <a
-            href="https://www.museothyssen.org/exposiciones"
-            target="_blank"
-            title=" se abre una nueva ventana"
-          >
-            Exposiciones</a
-          >
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </li>
+        <li class="logo">
+            <a href="#home" onclick="closeMenu()">TXT</a>
+        </li>
+        <li>
+            <a href="history.html" onclick="closeMenu()">Nuestra historia</a>
+        </li>
+        <li>
+            <a href="https://www.museothyssen.org/exposiciones" target="_blank" onclick="closeMenu()">
+                Exposiciones
+            </a>
         </li>
         <li class="tickets">
-          <a href="tickets.html"> Comprar entradas</a>
+            <a href="tickets.html" onclick="closeMenu()">Comprar entradas</a>
         </li>
         <li class="tickets icono">
-          <a href="tickets.html">
-            <i class="fa-solid fa-ticket"></i>
-          </a>
+            <a href="tickets.html" onclick="closeMenu()">
+                <i class="fa-solid fa-ticket"></i>
+            </a>
         </li>
-      </ul>
-    </nav>
+    </ul>
+</nav>
 
     <!-- Header............................................. -->
     <header class="header">
@@ -93,7 +93,9 @@
 
     <div class="columna-izquierda">
       <div class="botones">
-        <button class="btn-comprar">Comprar entradas</button>
+        <button class="btn-comprar">
+          <a href="tickets.html">Comprar entradas</a>
+        </button>
         <button class="btn-leer">Leer más</button>
         <button class="btn-donde">Dónde estamos</button>
       </div>
