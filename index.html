@@ -28,6 +28,10 @@
     <!-- Maquetación del menu de navegación........................... -->
     <nav id="menu">
       <ul>
+         <li>
+          <!-- Al hacer clic en el icono hamburguesa, se llama a la función toggleMenu() -->
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </li>
         <li class="logo">
           <a href="#home"> TXT</a>
         </li>
@@ -93,7 +97,9 @@
 
     <div class="columna-izquierda">
       <div class="botones">
-        <button class="btn-comprar">Comprar entradas</button>
+        <button class="btn-comprar">
+          <a href="tickets.html">Comprar entradas</a>
+        </button>
         <button class="btn-leer">Leer más</button>
         <button class="btn-donde">Dónde estamos</button>
       </div>
