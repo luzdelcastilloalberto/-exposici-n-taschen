@@ -155,17 +155,10 @@ function actualizarPasos() {
 }
 
 function actualizarNavegacion() {
-<<<<<<< HEAD
-    if (pasoActual === 4) {
-        navegacion.classList.add('centrada');
-        navegacion.innerHTML = `
-            <a href="tickets.html" class="inicio">
-=======
   if (pasoActual === 4) {
     navegacion.classList.add("centrada");
     navegacion.innerHTML = `
             <a href="index.html" class="inicio">
->>>>>>> 655776f200db68a9a022d814970ea9a051e6b2ea
                 VOLVER AL INICIO
             </a>
         `;
