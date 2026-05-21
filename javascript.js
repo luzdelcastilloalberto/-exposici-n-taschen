@@ -141,7 +141,7 @@ function actualizarNavegacion() {
     if (pasoActual === 4) {
         navegacion.classList.add('centrada');
         navegacion.innerHTML = `
-            <a href="index.html" class="inicio">
+            <a href="tickets.html" class="inicio">
                 VOLVER AL INICIO
             </a>
         `;

@@ -695,8 +695,8 @@ a {
 }
 .page-tickets .proceso {
   width: 100%;
-  height: 95vh;
-  padding: 40px 0;
+  min-height: 95vh;
+  padding: 40px 0 5px 0;
 }
 .page-tickets .pasos {
   width: 100%;
@@ -936,11 +936,10 @@ a {
 .page-tickets .navegacion {
   width: 100%;
   max-width: 1100px;
-  margin: 40px auto 0;
+  margin: 40px auto 40px;
   display: flex;
   justify-content: space-between;
 }
-
 .page-tickets .oculto {
   visibility: hidden;
 }
@@ -1095,7 +1094,6 @@ a {
 
 .page-tickets .inicio {
   padding: 14px 34px;
-  border: none;
   background: #4b007d;
   color: white;
   cursor: pointer;
@@ -1104,6 +1102,7 @@ a {
   justify-content: center;
   text-decoration: none;
   transition: 0.3s;
+  border-radius: 28px;
 }
 
 .page-tickets .inicio:hover {
