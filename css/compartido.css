@@ -6,9 +6,8 @@
   scroll-behavior: smooth;
 }
 html,
-body {
-  overflow-x: hidden;
-  overflow-x: clip;
+body 
+overflow-x: clip;
 html {
   overflow-x: hidden;
   max-width: 100%;
