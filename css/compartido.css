@@ -1061,6 +1061,8 @@ a {
   cursor: pointer;
   font-size: 0.95rem;
   transition: 0.3s;
+  border-radius: 28px;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .page-tickets .boton:hover {
