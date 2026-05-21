@@ -8,7 +8,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -775,8 +775,13 @@ a {
   width: 100%;
   min-height: 95vh;
   padding: 40px 0 5px 0;
+  overflow: visible;
 }
 .page-tickets .pasos {
+  position: sticky;
+  top: 70px;
+  z-index: 50;
+  overflow: visible;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 40px;
@@ -785,6 +790,9 @@ a {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   border-radius: 28px;
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
   transition:
     background 0.35s ease,
     backdrop-filter 0.35s ease,
@@ -1507,8 +1515,8 @@ footer .footer-location p {
   }
 
   .page-tickets .proceso {
-    padding: 20px 0 120px 0;
-  }
+  padding: 20px 0 30px 0; 
+   }
 
   .page-tickets .pasos {
     grid-template-columns: repeat(2, 1fr);
@@ -1611,18 +1619,18 @@ footer .footer-location p {
     height: 100px;
   }
 
-  /* popup */
-  .page-tickets .fondo {
-    padding: 20px;
-    align-items: flex-end;
-  }
+  /* ventanaflotante */
+.page-tickets .fondo {
+  padding: 20px;
+  align-items: center; 
+}
 
-  .page-tickets .ventana {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px 16px;
-    border-radius: 16px 16px 0 0;
-  }
+.page-tickets .ventana {
+  width: 90%;
+  max-width: 90%;  
+  padding: 20px 16px;
+  border-radius: 16px; 
+}
 
   .page-tickets .info h3 {
     font-size: 1.5rem;
@@ -1647,5 +1655,82 @@ footer .footer-location p {
   .page-tickets .inicio {
     padding: 12px 24px;
     font-size: 0.9rem;
+  }
+}
+
+/* responsivefooter tablet (max 1024px) */
+@media (max-width: 1024px) {
+  footer .footer-top {
+    padding: 30px 24px 20px;
+    gap: 0 20px;
+  }
+
+  footer .footer-bottom {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .footer-location p {
+    text-align: left;
+    padding-right: 0;
+  }
+}
+
+/* responsivefooter movil (max 600px) */
+@media (max-width: 600px) {
+  footer .footer-top {
+    flex-direction: column;
+    padding: 24px 16px 16px;
+    gap: 10px;
+  }
+
+  footer .footer-social {
+    padding-left: 16px;
+    gap: 10px;
+  }
+
+  footer .footer-social i {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  footer .footer-copy {
+    padding-left: 16px;
+    font-size: 13px;
+  }
+
+  footer .footer-legal {
+    padding-left: 16px;
+    column-gap: 20px;
+    row-gap: 8px;
+  }
+
+  footer .footer-legal p,
+  footer .footer-legal a {
+    font-size: 12px;
+  }
+
+  footer .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  footer .footer-logos {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer .footer-logos img {
+    height: 36px;
+  }
+
+  footer .footer-location p {
+    text-align: left;
+    padding-right: 0;
+    font-size: 12px;
   }
 }
