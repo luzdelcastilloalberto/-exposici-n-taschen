@@ -26,36 +26,32 @@
 
   <body class="page-index">
     <!-- Maquetación del menu de navegación........................... -->
-    <nav id="menu">
-      <ul>
-         <li>
-          <!-- Al hacer clic en el icono hamburguesa, se llama a la función toggleMenu() -->
-          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+   <nav id="menu">
+    <ul>
+        <li>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
         </li>
         <li class="logo">
-          <a href="#home"> TXT</a>
+            <a href="#home" onclick="closeMenu()">TXT</a>
         </li>
-
-        <li><a href="history.html">Nuestra historia</a></li>
         <li>
-          <a
-            href="https://www.museothyssen.org/exposiciones"
-            target="_blank"
-            title=" se abre una nueva ventana"
-          >
-            Exposiciones</a
-          >
+            <a href="history.html" onclick="closeMenu()">Nuestra historia</a>
+        </li>
+        <li>
+            <a href="https://www.museothyssen.org/exposiciones" target="_blank" onclick="closeMenu()">
+                Exposiciones
+            </a>
         </li>
         <li class="tickets">
-          <a href="tickets.html"> Comprar entradas</a>
+            <a href="tickets.html" onclick="closeMenu()">Comprar entradas</a>
         </li>
         <li class="tickets icono">
-          <a href="tickets.html">
-            <i class="fa-solid fa-ticket"></i>
-          </a>
+            <a href="tickets.html" onclick="closeMenu()">
+                <i class="fa-solid fa-ticket"></i>
+            </a>
         </li>
-      </ul>
-    </nav>
+    </ul>
+</nav>
 
     <!-- Header............................................. -->
     <header class="header">
