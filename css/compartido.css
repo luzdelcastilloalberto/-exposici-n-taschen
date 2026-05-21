@@ -19,15 +19,16 @@ a {
 
 /* nav........................................ */
 #menu {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 100;
   background-color: yellow;
   box-sizing: border-box;
   height: 50px;
   width: 100%;
   line-height: 1.6;
 }
+
 #menu img {
   width: 30px;
   height: 30px;
@@ -87,6 +88,12 @@ a {
   }
 }
 
+@media (max-width: 835px) {
+  #menu ul {
+    font-size: 14px;
+  }
+}
+
 /* landing............................ */
 
 .page-index {
@@ -126,7 +133,7 @@ a {
 .page-index .header {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   overflow: hidden;
   background: #000000;
 }
@@ -392,7 +399,13 @@ a {
 
   .page-index .autor p {
     font-size: 1.5rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .page-index .galeria > figure {
+    filter: none;
+    animation: none;
+    flex: 45%;
   }
 }
 
@@ -1109,7 +1122,7 @@ a {
   }
 }
 
-footer {
+/* footer {
   background-color: #5b0090;
   color: #fff;
 
@@ -1135,67 +1148,13 @@ footer {
   flex-wrap: wrap;
   gap: 0 40px;
   padding: 40px 48px 24px; /* ← el padding va aquí */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+/* border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 32px;
-}
+} */
 /* ── Iconos redes sociales ── */
-.footer-social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 16px;
-  padding-left: 20px;
-}
 
-.footer-social i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.footer-social i:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* ── Copyright ── */
-.footer-copy {
-  margin-bottom: 28px;
-  padding-left: 20px;
-}
-
-/* ── Links legales ── */
-.footer-legal {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 40px;
-  row-gap: 10px;
-  margin-bottom: 32px;
-  padding-left: 20px;
-}
-
-.footer-legal p {
-  margin: 0;
-}
-
-/* ── Links generales ── */
-footer a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  opacity: 0.8;
-}
-
-/* ── Pie: logos + transporte ── */
-.footer-bottom {
+/* ──  logos + transporte ── */
+/* .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1213,25 +1172,171 @@ footer a:hover {
 .footer-logos img {
   height: 52px;
   width: auto;
-}
+} */
 
-.footer-location {
+/* .footer-location {
   display: flex;
   align-items: flex-start;
   gap: 12px;
 }
-
-.footer-location figure {
+/*  */
+/* .footer-location figure {
   margin: 0;
 }
 
 .footer-location img {
   width: 36px;
   vertical-align: middle;
-}
-
-.footer-location p {
+} */
+/*  */
+/* .footer-location p {
   text-align: right;
   line-height: 1.7;
   padding-right: 30px;
+} */
+
+/* ── footer ── */
+
+footer {
+  background-color: #5b0090;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* top nav */
+footer .footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 40px;
+  padding: 40px 48px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 32px;
+}
+
+footer .footer-top p {
+  margin: 0;
+  width: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  font-style: normal;
+  color: #fff;
+}
+
+footer .footer-top a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+footer .footer-top a:hover {
+  opacity: 0.8;
+}
+
+/* redes sociales */
+footer .footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+footer .footer-social i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+footer .footer-social i:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* copyright */
+footer .footer-copy {
+  margin: 0 0 28px 0;
+  padding-left: 20px;
+  width: auto;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  font-style: normal;
+}
+
+/* links legales */
+footer .footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 40px;
+  row-gap: 10px;
+  margin-bottom: 32px;
+  padding-left: 20px;
+}
+
+footer .footer-legal p {
+  margin: 0;
+  width: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  font-style: normal;
+  color: #fff;
+}
+
+footer .footer-legal a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer .footer-legal a:hover {
+  opacity: 0.8;
+}
+
+/* bottom logos + ubicacion */
+footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 48px;
+}
+
+footer .footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  width: auto;
+}
+
+footer .footer-logos img {
+  height: 52px;
+  width: auto;
+}
+
+footer .footer-location {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer .footer-location p {
+  text-align: right;
+  line-height: 1.7;
+  padding-right: 30px;
+  color: #fff;
+  font-style: italic;
+  font-size: 14px;
+  width: auto;
+  margin: 0;
 }
