@@ -38,7 +38,7 @@ a {
   display: flex;
   font-size: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 #menu > ul > li > a {
   color: black;
@@ -65,12 +65,48 @@ a {
   color: #000000;
   text-decoration: none;
 }
-#menu ul li.tickets a {
-  color: #000000;
-}
+
 #menu > ul > li:hover {
   transform: scale(1.01);
   transition: transform 0.3s;
+}
+
+/* Se oculta el icono hamburguesa */
+#menu > ul > li:first-child {
+  display: none;
+  color: black;
+}
+
+/* Media query para pantallas de menos de 700px */
+@media screen and (max-width: 700px) {
+  header,
+  nav {
+    padding: 1rem 10%;
+  }
+}
+
+/* Media query para pantallas de menos de 500px */
+@media screen and (max-width: 700px) {
+  /* Opciones en vertical. Se cambia la disposición del flexbox */
+  #menu > ul {
+    flex-direction: column;
+    justify-content: flex-start !important;
+    padding: 0 1rem;
+  }
+  /* Se muestra el icono hamburguesa */
+  #menu > ul > li:first-child {
+    display: block;
+    /* Se cambia el puntero del ratón */
+    cursor: pointer;
+  }
+  /* Se ocultan las opciones */
+  #menu > ul > li:not(:first-child) {
+    display: none;
+  }
+  /* Se le pone la clase abierto al nav cuando el menú se abre. Esta clase se añadirá con JavaScript */
+  #menu.abierto > ul > li:not(:first-child) {
+    display: block;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -91,6 +127,12 @@ a {
 @media (max-width: 835px) {
   #menu ul {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  #menu ul {
+    font-size: 12px;
   }
 }
 
@@ -263,6 +305,9 @@ a {
   color: black;
   border: none;
 }
+.page-index .btn-comprar a {
+  color: black;
+}
 .page-index .btn-comprar:hover {
   background: white;
   color: black;
@@ -431,6 +476,7 @@ a {
     font-size: 1rem;
   }
 }
+
 /* historia.................................. */
 .page-history {
   background-color: #000000;
