@@ -242,7 +242,7 @@ a {
 }
 .page-index .dots {
   position: absolute;
-  bottom: 6rem;
+  bottom: 3em;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -259,6 +259,9 @@ a {
 .page-index .dot.active {
   background: white;
 }
+
+/* /* seccion de info............................ */
+
 .page-index #info {
   display: flex;
   height: auto;
@@ -291,14 +294,13 @@ a {
 .page-index .columna-izquierda {
   width: 30%;
   padding: 0 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
 }
 .page-index .columna-derecha {
   width: 50%;
   text-align: justify;
   padding: 0 3rem;
-
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 
   /* estilos de botones................................ */
 }
@@ -333,8 +335,12 @@ a {
 .page-index .btn-leer:hover,
 .page-index .btn-donde:hover {
   background: #ffffff;
-  color: #3b0764;
   transition: 0.3s ease;
+}
+
+.page-index .btn-leer:hover a,
+.page-index .btn-donde:hover a {
+  color: #3b0764 !important;
 }
 .page-index .galeria {
   display: flex;
