@@ -265,13 +265,13 @@ a {
   text-align: center;
   font-size: 14vw;
   font-weight: 400;
-  margin-top: 7rem;
+  margin-top: 2rem;
 }
 .page-history h2 {
   font-family: 'Bebas Neue', cursive;
   font-size: 4vw;
   font-weight: 200;
-  margin-top: -3rem;
+  margin-top: rem;
   margin-left: 3rem;
 }
 .page-history h3 {
@@ -280,7 +280,7 @@ a {
   text-align: center;
   font-size: 4vw;
   font-weight: 200;
-  margin-top: 6rem;
+  margin-top: 4rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
@@ -645,4 +645,174 @@ footer a:hover {
   text-align: right;
   line-height: 1.7;
   padding-right: 30px;
+}
+/* ===================== RESPONSIVE TABLET (max-width: 1024px) ===================== */
+@media screen and (max-width: 1319px) {
+
+  /* --- Nav --- */
+  #menu ul { font-size: 20px; justify-content: space-around; }
+  #menu ul li + li { margin-left: 1rem; }
+  #menu ul li.tickets:not(.icono) { margin-left: 1rem; }
+
+  /* --- Header --- */
+  .page-history h1 { font-size: 18vw; margin-top: 1.5rem; }
+  .page-history h2 { font-size: 6vw; margin-top: 0; }
+  .page-history h3 { font-size: 5vw; margin-top: 2rem; }
+  .page-history h4 { font-size: 4vw; margin-top: 2rem; margin-right: 2rem; }
+
+  /* --- Ocultar SVG --- */
+  .page-history .todo > img {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* --- Quitar transform del todo --- */
+  .page-history .todo {
+    transform: none !important;
+    margin-bottom: 0 !important;
+  }
+
+ /* --- Bloques más grandes y compactos --- */
+  .page-history .textoimagen,
+  .page-history .textoimagen1,
+  .page-history .textoimagen2,
+  .page-history .textoimagen3,
+  .page-history .textoimagen4,
+  .page-history .textoimagen5,
+  .page-history .textoimagen6,
+  .page-history .textoimagen7 {
+    margin: 2rem auto !important;  /* auto para centrar */
+    padding: 0 3rem !important;    /* padding igual en ambos lados */
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .page-history .texto { width: 45%; font-size: 1.5rem; }
+  .page-history figure { width: 35%; } /* ← imagen más pequeña */
+
+  /* --- Resetear todas las figuras --- */
+
+  .page-history .figura2,
+  .page-history .figura4,
+  .page-history .figura6,
+  .page-history .figura8 { width: 45%; }
+
+  .page-history .textoimagen6 {
+  align-items: center !important;
+}
+ .page-history .figura1,
+  .page-history .figura3,
+  .page-history .figura5{
+    width: 50%;
+   text-align: center;
+   padding-left: 4rem;
+  }
+ 
+ .page-history .figura7 { 
+  margin: 0 ; 
+  width: 45% ; 
+  padding: 0 ;
+}
+
+.page-history .figura7 img { 
+  width: 90% ; 
+  padding: 0 ;
+  margin: 0 ;
+}
+  /* --- Texto final y fecha --- */
+  .page-history .textoabajo { margin-top: 5rem; font-size: 4vw; }
+  .page-history .fechaabajo { padding-right: 2rem; padding-top: 3rem; }
+}
+
+/* ===================== RESPONSIVE MÓVIL (max-width: 768px) ===================== */
+@media screen and (max-width: 768px) {
+
+  /* --- Ocultar SVG y sustituir por línea CSS --- */
+  .page-history .todo > img {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .page-history .todo {
+    position: relative;
+    padding: 0 1.5rem;
+  }
+
+  .page-history .todo::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  /* --- Bloques en columna --- */
+  .page-history .textoimagen,
+  .page-history .textoimagen1,
+  .page-history .textoimagen2,
+  .page-history .textoimagen3,
+  .page-history .textoimagen4,
+  .page-history .textoimagen5,
+  .page-history .textoimagen6,
+  .page-history .textoimagen7 {
+    flex-direction: column !important;
+    align-items: center;
+    width: 45%;
+    margin: 3rem auto !important;
+    padding: 0 ;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* --- Punto en la línea por cada bloque --- */
+  .page-history .textoimagen::before,
+  .page-history .textoimagen1::before,
+  .page-history .textoimagen2::before,
+  .page-history .textoimagen3::before,
+  .page-history .textoimagen4::before,
+  .page-history .textoimagen5::before,
+  .page-history .textoimagen6::before,
+  .page-history .textoimagen7::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .page-history .texto { width: 100%; }
+  .page-history figure { width: 100%; margin: 0; }
+
+  .page-history .figura1 img,
+  .page-history .figura2 img,
+  .page-history .figura3 img,
+  .page-history .figura4 img,
+  .page-history .figura5 img,
+  .page-history .figura6 img,
+  .page-history .figura7 img,
+  .page-history .figura8 img { width: 100%; margin: 0; padding: 0; }
+
+  .page-history .figura1,
+  .page-history .figura2,
+  .page-history .figura3,
+  .page-history .figura4,
+  .page-history .figura5,
+  .page-history .figura6,
+  .page-history .figura7,
+  .page-history .figura8 { margin: 0; width: 100%; }
+
+  .page-history .textoabajo { margin-top: 5rem; font-size: 4vw; }
+  .page-history .fechaabajo { padding-right: 2rem; padding-top: 3rem; }
 }
