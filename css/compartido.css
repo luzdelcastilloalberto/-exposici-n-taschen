@@ -1407,3 +1407,235 @@ footer .footer-location p {
   width: auto;
   margin: 0;
 }
+/* TABLET (max 1024px) tickets*/
+@media (max-width: 1024px) {
+  .page-tickets .bloque {
+    max-width: 95%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .page-tickets .imagen {
+    width: 100%;
+    height: 220px;
+  }
+
+  .page-tickets .texto {
+    width: 100%;
+    padding: 30px 30px;
+  }
+
+  .page-tickets .texto h1 {
+    font-size: 3.5rem;
+  }
+
+  .page-tickets .pasos {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 95%;
+  }
+
+  .page-tickets .fases {
+    max-width: 95%;
+    padding: 0 20px;
+  }
+
+  .page-tickets .navegacion {
+    max-width: 95%;
+    padding: 0 20px;
+  }
+
+  .page-tickets .tarjeta {
+    max-width: 95%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .page-tickets .imagenfinal {
+    width: 100%;
+    height: 200px;
+  }
+
+  .page-tickets .textofinal {
+    width: 100%;
+    padding: 24px 28px;
+  }
+
+  .page-tickets .codigo {
+    width: 100%;
+    padding: 20px;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+/* MÓVIL (max 600px) tickets */
+@media (max-width: 600px) {
+  .page-tickets .pagina {
+    padding-top: 60px;
+  }
+
+  .page-tickets .bloque {
+    margin: 16px auto 0;
+  }
+
+  .page-tickets .imagen {
+    height: 160px;
+  }
+
+  .page-tickets .texto {
+    padding: 20px 18px;
+  }
+
+  .page-tickets .texto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 14px;
+  }
+
+  .page-tickets .texto p {
+    font-size: 0.9rem;
+  }
+
+  .page-tickets .proceso {
+    padding: 20px 0 120px 0;
+  }
+
+  .page-tickets .pasos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 24px;
+  }
+
+  .page-tickets .paso {
+    padding: 12px 10px;
+    font-size: 0.75rem;
+    white-space: normal;
+    border-radius: 20px;
+  }
+
+  .page-tickets .calendario {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .page-tickets .cabecera h3 {
+    font-size: 1.1rem;
+  }
+
+  .page-tickets .dias div,
+  .page-tickets .dia {
+    font-size: 0.78rem;
+  }
+
+  .page-tickets .horas {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10px;
+  }
+
+  .page-tickets .hora {
+    font-size: 0.85rem;
+    padding: 10px 6px;
+  }
+
+  .page-tickets .formulario {
+    max-width: 100%;
+    padding: 0 18px;
+    margin: 6vh auto;
+  }
+
+  .page-tickets .formulario input,
+  .page-tickets .formulario select {
+    font-size: 0.9rem;
+  }
+
+  .page-tickets .fases {
+    padding: 0 10px;
+  }
+
+  .page-tickets .navegacion {
+    padding: 0 10px;
+    margin: 24px auto 80px;
+    gap: 10px;
+  }
+
+  .page-tickets .boton {
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
+
+  .page-tickets .fase h2 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    padding-left: 10px;
+  }
+
+  .page-tickets .tarjeta {
+    margin: 0 10px;
+  }
+
+  .page-tickets .textofinal {
+    padding: 18px 16px;
+  }
+
+  .page-tickets .textofinal h3 {
+    font-size: 1.2rem;
+  }
+
+  .page-tickets #datosfinal {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+
+  .page-tickets #datosfinal p {
+    font-size: 0.85rem;
+  }
+
+  .page-tickets .codigo {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .page-tickets .codigo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* popup */
+  .page-tickets .fondo {
+    padding: 20px;
+    align-items: flex-end;
+  }
+
+  .page-tickets .ventana {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 16px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .page-tickets .info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .page-tickets #resumencompra {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .page-tickets #resumencompra p {
+    font-size: 0.85rem;
+  }
+
+  .page-tickets #aceptarcompra {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 0.95rem;
+  }
+
+  .page-tickets .inicio {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
