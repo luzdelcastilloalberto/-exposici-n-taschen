@@ -19,29 +19,34 @@
   <body class="page-tickets">
     <nav id="menu">
       <ul>
-        <li class="logo">
-          <a href="index.html"> TXT</a>
+        <li>
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
         </li>
-
-        <li><a href="history.html">Nuestra historia</a></li>
+        <li class="logo">
+          <a href="index.html">TXT</a>
+        </li>
+        <li>
+          <a href="history.html" onclick="closeMenu()">Nuestra historia</a>
+        </li>
         <li>
           <a
             href="https://www.museothyssen.org/exposiciones"
             target="_blank"
-            title=" se abre una nueva ventana"
+            onclick="closeMenu()"
           >
-            Exposiciones</a
-          >
+            Exposiciones
+          </a>
         </li>
         <li class="tickets">
-          <a href="tickets.html"> Comprar entradas</a>
+          <a href="tickets.html" onclick="closeMenu()">Comprar entradas</a>
         </li>
         <li class="tickets icono">
-          <a href="tickets.html"> <i class="fa-solid fa-ticket"></i> </a>
+          <a href="tickets.html" onclick="closeMenu()">
+            <i class="fa-solid fa-ticket"></i>
+          </a>
         </li>
       </ul>
     </nav>
-
     <main class="pagina">
       <section class="bloque">
         <div class="imagen">
@@ -209,7 +214,6 @@
       </nav>
 
       <div class="footer-social">
-<<<<<<< HEAD
         <a
           href="https://www.facebook.com/TASCHEN"
           target="_blank"
@@ -250,30 +254,6 @@
         </a>
         <i class="fa-brands fa-whatsapp"></i>
       </div>
-=======
-  <a href="https://www.facebook.com/TASCHEN" target="_blank" title="Facebook">
-    <i class="fa-brands fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/taschen" target="_blank" title="Instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a href="https://x.com/taschen" target="_blank" title="X / Twitter">
-    <i class="fa-brands fa-x-twitter"></i>
-  </a>
-  <a href="https://www.linkedin.com/company/taschen" target="_blank" title="LinkedIn">
-    <i class="fa-brands fa-linkedin-in"></i>
-  </a>
-  <a href="https://www.youtube.com/@TASCHENbooks" target="_blank" title="YouTube">
-    <i class="fa-brands fa-youtube"></i>
-  </a>
-  <a href="https://www.tiktok.com/@taschen" target="_blank" title="TikTok">
-    <i class="fa-brands fa-tiktok"></i>
-  </a>
-  <a href="https://web.whatsapp.com" target="_blank" title="WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-  </a>
-    </div>
->>>>>>> 0b3b574208dfccfe6a1541aacaed720e19704472
       <p class="footer-copy">©2026 Thaschen</p>
       <nav class="footer-legal">
         <p>
@@ -359,12 +339,6 @@
         </div>
       </div>
     </footer>
-
-<<<<<<< HEAD
-    
     <script src="js/script.js"></script>
-=======
-    <script src="javascript.js"></script>
->>>>>>> 0b3b574208dfccfe6a1541aacaed720e19704472
   </body>
 </html>

@@ -79,71 +79,6 @@ a {
   color: black;
 }
 
-@media (max-width: 1180px) {
-  #menu ul li.tickets:not(.icono) {
-    margin-left: auto;
-  }
-
-  #menu ul {
-    justify-content: space-between;
-    padding: 0 2rem;
-  }
-
-  #menu ul li + li {
-    margin-left: 2rem;
-  }
-}
-
-@media (max-width: 835px) {
-  #menu ul {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 500px) {
-  #menu ul {
-    font-size: 12px;
-  }
-}
-
-/* Media query para pantallas de menos de 700px */
-@media screen and (max-width: 700px) {
-  #menu {
-    height: auto;
-  }
-
-  #menu ul {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem 1rem;
-  }
-
-  /* Se muestra el icono hamburguesa */
-  #menu > ul > li:first-child {
-    display: block;
-    cursor: pointer;
-    font-size: 25px;
-    padding: 0.5rem 0;
-  }
-
-  /* Se ocultan todas las opciones menos el icono */
-  #menu > ul > li:not(:first-child) {
-    display: none;
-  }
-
-  /* Cuando el menú tiene la clase "abierto", se muestran las opciones */
-  #menu.abierto > ul > li:not(:first-child) {
-    display: block;
-    margin-left: 0 !important; /* Anula los márgenes del menú horizontal */
-    padding: 0.4rem 0;
-  }
-
-  /* Quitamos el margin-left especial de .tickets en móvil */
-  #menu ul li.tickets:not(.icono) {
-    margin-left: 0;
-  }
-}
-
 /* landing............................ */
 
 .page-index {
@@ -423,137 +358,6 @@ a {
   color: yellow;
 }
 
-@media (max-width: 1180px) {
-  .page-index .contenedor-tickets {
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-  }
-
-  .page-index .columna-izquierda {
-    width: 100%;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .page-index .botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: nowrap;
-  }
-
-  .page-index .botones button {
-    width: auto;
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
-  }
-  .page-index .columna-derecha {
-    width: 100%;
-    padding: 0 2rem 2rem;
-  }
-
-  .page-index p {
-    margin: 1rem 1rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .page-index .botones {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    gap: 0.5rem;
-    flex-wrap: nowrap;
-  }
-}
-.page-index .botones button {
-  width: auto;
-  padding: 0.8rem 1.2rem;
-  font-size: 1rem;
-}
-
-@media (max-width: 835px) {
-  .page-index h2.exposición,
-  .page-index h2.fechas {
-    font-size: 1rem;
-  }
-
-  .page-index .quote p {
-    font-size: 4rem;
-    line-height: 3rem;
-  }
-
-  .page-index .autor p {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-  }
-
-  .page-index .galeria > figure {
-    /* quitar efecto desenfocado y hover de la galeria */
-    filter: none !important;
-    animation: none;
-    flex: 45%;
-  }
-
-  .page-index .columna-izquierda {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 490px) {
-  /* se aumenta la altura del ehader para q ls h2 no queden pegado a los dots */
-  .page-index .header {
-    height: 100vh;
-  }
-
-  .page-index .dots {
-    bottom: 8rem;
-  }
-
-  .page-index h2.exposición {
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    /* impide q el texto se divida en 2 lineas */
-    white-space: nowrap;
-    font-size: 1rem;
-  }
-
-  .page-index h2.fechas {
-    bottom: 1.5rem;
-    right: 50%;
-    transform: translateX(50%);
-    white-space: nowrap;
-    font-size: 1rem;
-  }
-
-  .page-index .contenedor {
-    width: 300px;
-    height: 400px;
-  }
-
-  .page-index .botones {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* /* justificar p a al izda no rios */
-  .page-index p {
-    text-align: left;
-  }
-
-  .page-index .galeria {
-    padding-top: 0;
-    margin-top: 0;
-  }
-}
-
 /* historia.................................. */
 
 .page-history {
@@ -564,7 +368,7 @@ a {
 .page-history h1 {
   font-family: "Bebas Neue", cursive;
   text-align: center;
-  font-size: 14vw;
+  font-size: 13vw;
   font-weight: 400;
   margin-top: 2rem;
 }
@@ -579,7 +383,7 @@ a {
   font-family: "Roboto", sans-serif;
   font-style: italic;
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: 200;
   margin-top: 4rem;
   margin-left: 2rem;
@@ -591,7 +395,7 @@ a {
   font-style: italic;
   font-size: 3vw;
   font-weight: 100;
-  margin-top: 6rem;
+  margin-top: 1.5rem;
   margin-right: 5rem;
 }
 .page-history h5 {
@@ -1266,6 +1070,8 @@ a {
   }
 }
 
+/* footer.................................. */
+
 footer {
   background-color: #5b0090;
   color: #fff;
@@ -1341,7 +1147,6 @@ footer p {
   margin: 0;
 }
 
-/* ── Links generales ── */
 footer a {
   color: #fff;
   text-decoration: underline;
@@ -1351,7 +1156,7 @@ footer a:hover {
   opacity: 0.8;
 }
 
-/* ── pie: logos + transporte........................... ── */
+/*  logos + transporte........................... ── */
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -1407,186 +1212,397 @@ footer a:hover {
 .page-tickets footer * {
   color: white !important;
 }
+/* media queries.................................. */
 
-/* responsove tickets.................................. */
-@media screen and (max-width: 1319px) {
-  /* --- Nav --- */
-
-  /* --- Header --- */
-  .page-history h1 {
-    font-size: 18vw;
-    margin-top: 1.5rem;
-  }
-  .page-history h2 {
-    font-size: 6vw;
-    margin-top: 0;
-  }
-  .page-history h3 {
-    font-size: 5vw;
-    margin-top: 2rem;
-  }
-  .page-history h4 {
-    font-size: 4vw;
-    margin-top: 2rem;
-    margin-right: 2rem;
+@media (max-width: 1180px) {
+  #menu ul li.tickets:not(.icono) {
+    margin-left: auto;
   }
 
-  .page-history .todo > img {
-    display: none !important;
-    visibility: hidden !important;
+  #menu ul {
+    justify-content: space-between;
+    padding: 0 2rem;
   }
 
-  .page-history .todo {
-    transform: none !important;
-    margin-bottom: 0 !important;
-  }
-
-  /* --- bloques más grandes y compactos...................... --- */
-  .page-history .textoimagen,
-  .page-history .textoimagen1,
-  .page-history .textoimagen2,
-  .page-history .textoimagen3,
-  .page-history .textoimagen4,
-  .page-history .textoimagen5,
-  .page-history .textoimagen6,
-  .page-history .textoimagen7 {
-    margin: 2rem auto !important;
-    padding: 0 3rem !important;
-    gap: 2rem;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  footer .footer-top a:hover {
-    opacity: 0.8;
-  }
-
-  /* redes sociales */
-  footer .footer-social {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 16px;
-    padding-left: 20px;
-  }
-
-  .page-history .figura7 {
-    margin: 0;
-    width: 45%;
-    padding: 0;
-  }
-
-  .page-history .figura7 img {
-    width: 90%;
-    padding: 0;
-    margin: 0;
-  }
-  /* --- Texto final y fecha --- */
-  .page-history .textoabajo {
-    margin-top: 5rem;
-    font-size: 4vw;
-  }
-  .page-history .fechaabajo {
-    padding-right: 2rem;
-    padding-top: 3rem;
+  #menu ul li + li {
+    margin-left: 2rem;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .page-history .todo > img {
-    display: none !important;
-    visibility: hidden !important;
+@media (max-width: 835px) {
+  #menu ul {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  #menu ul {
+    font-size: 12px;
+  }
+}
+
+/* Media query para pantallas de menos de 700px */
+@media screen and (max-width: 700px) {
+  #menu {
+    height: auto;
   }
 
-  .page-history .todo {
-    position: relative;
-    padding: 0 1.5rem;
+  #menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
   }
 
-  .page-history .todo::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #ffffff;
-    transform: translateX(-50%);
-    z-index: 0;
+  /* Se muestra el icono hamburguesa */
+  #menu > ul > li:first-child {
+    display: block;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 0.5rem 0;
   }
 
-  .page-history .textoimagen,
-  .page-history .textoimagen1,
-  .page-history .textoimagen2,
-  .page-history .textoimagen3,
-  .page-history .textoimagen4,
-  .page-history .textoimagen5,
-  .page-history .textoimagen6,
-  .page-history .textoimagen7 {
-    flex-direction: column !important;
+  /* Se ocultan todas las opciones menos el icono */
+  #menu > ul > li:not(:first-child) {
+    display: none;
+  }
+
+  /* Cuando el menú tiene la clase "abierto", se muestran las opciones */
+  #menu.abierto > ul > li:not(:first-child) {
+    display: block;
+    margin-left: 0 !important; /* Anula los márgenes del menú horizontal */
+    padding: 0.4rem 0;
+  }
+
+  /* Quitamos el margin-left especial de .tickets en móvil */
+  #menu ul li.tickets:not(.icono) {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1180px) {
+  .page-index .contenedor-tickets {
+    flex-direction: column;
     align-items: center;
-    width: 95%;
-    margin: 3rem auto !important;
-    padding: 0;
+    padding: 2rem;
+  }
+
+  .page-index .columna-izquierda {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-index .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .page-index .botones button {
+    width: auto;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+  .page-index .columna-derecha {
+    width: 100%;
+    padding: 0 2rem 2rem;
+  }
+
+  .page-index p {
+    margin: 1rem 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-index .botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
     gap: 0.5rem;
-    position: relative;
-    z-index: 1;
+    flex-wrap: nowrap;
+  }
+}
+.page-index .botones button {
+  width: auto;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 1035px) {
+  .page-index h2.exposición,
+  .page-index h2.fechas {
+    font-size: 1rem;
   }
 
-  .page-history .textoimagen::before,
-  .page-history .textoimagen1::before,
-  .page-history .textoimagen2::before,
-  .page-history .textoimagen3::before,
-  .page-history .textoimagen4::before,
-  .page-history .textoimagen5::before,
-  .page-history .textoimagen6::before,
-  .page-history .textoimagen7::before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background: #ffffff;
-    border-radius: 50%;
-    position: absolute;
+  @media (max-width: 850px) {
+      .page-index h2.exposición {
+    bottom: 3rem;
     left: 50%;
-    top: -1.5rem;
     transform: translateX(-50%);
-    z-index: 2;
+    white-space: nowrap;
+    font-size: 1rem;
   }
 
-  .page-history .texto {
-    width: 100%;
-    text-align: left;
+  .page-index h2.fechas {
+    bottom: 1.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+    font-size: 1rem;
   }
-  
-  .page-history figure {
-    width: 100%;
-    margin: 0;
+     .page-index .dots {
+      bottom: 0rem;
+    }
+
+  @media (max-width: 835px) {
+    .page-index .quote p {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
+    .page-index .autor p {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    .page-index .galeria > figure {
+      /* quitar efecto desenfocado y hover de la galeria */
+      filter: none !important;
+      animation: none;
+      flex: 45%;
+    }
+
+    .page-index .columna-izquierda {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
   }
 
-  .page-history .figura1 img,
-  .page-history .figura2 img,
-  .page-history .figura3 img,
-  .page-history .figura4 img,
-  .page-history .figura5 img,
-  .page-history .figura6 img,
-  .page-history .figura7 img,
-  .page-history .figura8 img {
-    width: 50%;
-    margin: 0;
-    padding: 0;
+  @media screen and (max-width: 600px) {
+    /* se aumenta la altura del ehader para q ls h2 no queden pegado a los dots */
+    .page-index .header {
+      height: 100vh;
+    }
+
+    .page-index .dots {
+      bottom: 8rem;
+    }
+
+    .page-index h2.exposición {
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      /* impide q el texto se divida en 2 lineas */
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+
+    .page-index h2.fechas {
+      bottom: 1.5rem;
+      right: 50%;
+      transform: translateX(50%);
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+
+    .page-index .contenedor {
+      width: 300px;
+      height: 400px;
+    }
+
+    .page-index .botones {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* /* justificar p a al izda no rios */
+    .page-index p {
+      text-align: left;
+    }
+
+    .page-index .galeria {
+      padding-top: 0;
+      margin-top: 0;
+    }
   }
 
-  .page-history .figura1,
-  .page-history .figura2,
-  .page-history .figura3,
-  .page-history .figura4,
-  .page-history .figura5,
-  .page-history .figura6,
-  .page-history .figura7,
-  .page-history .figura8 {
-    margin: 0;
-    width: 100%;
+  @media screen and (max-width: 1319px) {
+    /* --- Header --- */
+    .page-history h1 {
+      font-size: 18vw;
+      margin-top: 1.5rem;
+    }
+    .page-history h2 {
+      font-size: 6vw;
+      margin-top: 0;
+    }
+    .page-history h3 {
+      font-size: 5vw;
+      margin-top: 2rem;
+    }
+    .page-history h4 {
+      font-size: 4vw;
+      margin-top: 2rem;
+      margin-right: 2rem;
+    }
+
+    .page-history .todo > img {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    .page-history .todo {
+      transform: none !important;
+      margin-bottom: 0 !important;
+    }
+
+    .page-history .textoimagen,
+    .page-history .textoimagen1,
+    .page-history .textoimagen2,
+    .page-history .textoimagen3,
+    .page-history .textoimagen4,
+    .page-history .textoimagen5,
+    .page-history .textoimagen6,
+    .page-history .textoimagen7 {
+      margin: 2rem auto !important;
+      padding: 0 3rem !important;
+      gap: 2rem;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer .footer-top a:hover {
+      opacity: 0.8;
+    }
+
+    /* redes sociales */
+    footer .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-left: 20px;
+    }
+
+    .page-history .figura7 {
+      margin: 0;
+      width: 45%;
+      padding: 0;
+    }
+
+    .page-history .figura7 img {
+      width: 90%;
+      padding: 0;
+      margin: 0;
+    }
+    /* --- Texto final y fecha --- */
+    .page-history .textoabajo {
+      margin-top: 5rem;
+      font-size: 4vw;
+    }
+    .page-history .fechaabajo {
+      padding-right: 2rem;
+      padding-top: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .page-history {
+      padding-top: 0;
+    }
+
+    .page-history header {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .page-history .todo > img {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    .page-history .todo {
+      position: static;
+      padding: 0 1rem;
+    }
+
+    .page-history .todo::before {
+      display: none;
+    }
+
+    .page-history .textoimagen::before,
+    .page-history .textoimagen1::before,
+    .page-history .textoimagen2::before,
+    .page-history .textoimagen3::before,
+    .page-history .textoimagen4::before,
+    .page-history .textoimagen5::before,
+    .page-history .textoimagen6::before,
+    .page-history .textoimagen7::before {
+      display: none;
+    }
+
+    .page-history .textoimagen,
+    .page-history .textoimagen1,
+    .page-history .textoimagen2,
+    .page-history .textoimagen3,
+    .page-history .textoimagen4,
+    .page-history .textoimagen5,
+    .page-history .textoimagen6,
+    .page-history .textoimagen7 {
+      flex-direction: column !important;
+      align-items: center;
+      width: 95%;
+      margin: 3rem auto !important;
+      padding: 0 !important;
+      gap: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-history .texto {
+      width: 100%;
+      text-align: left;
+    }
+
+    .page-history figure {
+      width: 100%;
+      margin: 0;
+    }
+
+    .page-history .figura1 img,
+    .page-history .figura2 img,
+    .page-history .figura3 img,
+    .page-history .figura4 img,
+    .page-history .figura5 img,
+    .page-history .figura6 img,
+    .page-history .figura7 img,
+    .page-history .figura8 img {
+      width: 50%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page-history .figura1,
+    .page-history .figura2,
+    .page-history .figura3,
+    .page-history .figura4,
+    .page-history .figura5,
+    .page-history .figura6,
+    .page-history .figura7,
+    .page-history .figura8 {
+      margin: 0;
+      width: 100%;
+    }
+
+    .page-history .fechaabajo {
+      padding-bottom: 2rem;
+    }
   }
 
   footer .footer-legal a {
@@ -1598,7 +1614,7 @@ footer a:hover {
     opacity: 0.8;
   }
 
-  /* bottom logos + ubicacion */
+  /*  logos + ubicacion */
   footer .footer-bottom {
     display: flex;
     align-items: center;
@@ -1637,80 +1653,9 @@ footer a:hover {
     margin: 0;
   }
 
-  .page-history {
-    padding-top: 50px;
-  }
+  /*  tickets*............................../ */
 
-  .page-history header {
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .page-history h1 {
-    font-size: 20vw;
-    margin-top: 1rem;
-  }
-
-  .page-history h2 {
-    font-size: 6vw;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .page-history h3 {
-    font-size: 5vw;
-    margin: 1rem;
-  }
-
-  .page-history h4 {
-    font-size: 4vw;
-    margin-right: 1rem;
-    margin-top: 1rem;
-  }
-
-  /* ocultar imagen de línea del tiempo */
-  .page-history .todo > img {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  /* quitar línea vertical */
-  .page-history .todo {
-    position: static;
-    padding: 0 1rem;
-  }
-
-  .page-history .todo::before {
-    display: none;
-  }
-
-  /* quitar puntos de la línea */
-  .page-history .textoimagen::before,
-  .page-history .textoimagen1::before,
-  .page-history .textoimagen2::before,
-  .page-history .textoimagen3::before,
-  .page-history .textoimagen4::before,
-  .page-history .textoimagen5::before,
-  .page-history .textoimagen6::before,
-  .page-history .textoimagen7::before {
-    display: none;
-  }
-
-  /* bloques en columna uno debajo del otro */
-  .page-history .textoimagen,
-  .page-history .textoimagen1,
-  .page-history .textoimagen2,
-  .page-history .textoimagen3,
-  .page-history .textoimagen4,
-  .page-history .textoimagen5,
-  .page-history .textoimagen6,
-  .page-history .textoimagen7 {
-    flex-direction: column !important;
-
-
-
-  /* /* TABLET (max 1024px) tickets*............................../ */
-  @media (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     .page-tickets .bloque {
       max-width: 95%;
       height: auto;
@@ -1743,7 +1688,7 @@ footer a:hover {
 
     .page-tickets .navegacion {
       max-width: 95%;
-      padding: 0 
+      padding: 0;
     }
 
     .page-tickets .tarjeta {
